@@ -1,12 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Portfolio</title>
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunyoung Kim</title>
+<link rel="stylesheet" href="styles.css">
 <body>
-  <p>Hello, World!</p>
+  <main class="container">
+    <section class="hero">
+      <div class="left"><img src="assets/headshot.jpg" alt="Sunyoung Kim"></div>
+      <div class="right">
+        <h1>Sunyoung Kim</h1>
+        <p>Efficient AI • Quantization • HW–SW Co-design.</p>
+        <p><a href="#publications">Publications</a> · <a href="#projects">Projects</a> · <a href="SunyoungKim_CV.pdf">CV</a></p>
+      </div>
+    </section>
+
+    <section id="publications"><h2>Publications</h2>
+      <ul class="list">
+        <li><b>Bespoke LUT...</b> <i>ASPLOS (under review)</i>, 2025 — <a href="papers/bespoke_lut.pdf">PDF</a></li>
+      </ul>
+    </section>
+
+    <section id="projects"><h2>Projects</h2>
+      <ul class="list">
+        <li><b>KV-Cache Sharing Across Layers</b> — layer-shared KV cache for LLM serving. <a href="#">link</a></li>
+      </ul>
+    </section>
+  </main>
 </body>
 </html>
