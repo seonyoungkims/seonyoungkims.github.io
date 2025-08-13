@@ -42,21 +42,23 @@ body {
    Page Links under name
 ========================= */
 .page-links {
-  text-align: center;
+  display: flex;
+  justify-content: center;   /* 가로 중앙 */
+  flex-wrap: nowrap;         /* 줄바꿈 금지 */
+  gap: 6px;
   margin-bottom: 24px;
-  flex-wrap: nowrap;
 }
 
 .page-links a {
   display: inline-block;
-  margin: 4px 6px;
-  padding: 6px 12px;
-  font-size: 0.95rem;
+  padding: 5px 10px;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem); /* 화면 폭 줄면 글자 크기도 줄어듦 */
   color: var(--link);
   border: 1px solid var(--link);
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.2s ease;
+  white-space: nowrap;        /* 링크 안에서 줄바꿈 방지 */
 }
 
 .page-links a:hover {
