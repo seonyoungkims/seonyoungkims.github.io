@@ -38,32 +38,39 @@ body {
   margin: 8px 0 24px;
 }
 
-/* =========================
-   Page Links under name
-========================= */
+/* ===== Page Links under name (with icons) ===== */
 .page-links {
   display: flex;
-  justify-content: center;   /* 가로 중앙 */
-  flex-wrap: nowrap;         /* 줄바꿈 금지 */
-  gap: 6px;
+  justify-content: center;
+  flex-wrap: nowrap;              /* 한 줄 유지 */
+  gap: 8px;
   margin-bottom: 24px;
 }
 
 .page-links a {
-  display: inline-block;
-  padding: 5px 10px;
-  font-size: clamp(0.8rem, 1.5vw, 0.95rem); /* 화면 폭 줄면 글자 크기도 줄어듦 */
+  display: inline-flex;           /* 아이콘+텍스트 한 줄 정렬 */
+  align-items: center;            /* 수직 정렬 */
+  padding: 6px 12px;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);  /* 화면 좁아지면 글자 축소 */
   color: var(--link);
   border: 1px solid var(--link);
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.2s ease;
-  white-space: nowrap;        /* 링크 안에서 줄바꿈 방지 */
+  white-space: nowrap;            /* 링크 내부 줄바꿈 방지 */
 }
 
 .page-links a:hover {
   background: var(--link);
   color: #fff;
+}
+
+.page-links a img {
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 /* =========================
@@ -137,8 +144,21 @@ a:hover, a:focus {
 
   .page-title {
     font-size: 1.75rem;
-    margin: 4px 0 20px;
+    margin: 4px 0 12px;
     text-align: center;         /* 모바일에서도 확실히 중앙 */
+  }
+
+  .page-links {
+    gap: 6px;                   /* 모바일에서 간격 축소 */
+  }
+  .page-links a {
+    padding: 5px 10px;
+    font-size: clamp(0.75rem, 3.2vw, 0.9rem);
+  }
+  .page-links a img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
   }
 
   .hero {
