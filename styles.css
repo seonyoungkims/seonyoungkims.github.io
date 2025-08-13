@@ -104,26 +104,33 @@ a:hover, a:focus {
 @media (max-width: 720px) {
   .container { padding: 20px; }
 
+  /* 제목 중앙 */
   .page-title { 
     font-size: 1.75rem;
     margin: 4px 0 20px;
+    text-align: center; /* 모바일에서 가운데 정렬 */
   }
 
+  /* hero 세로 스택 */
   .hero {
-    grid-template-columns: 1fr;  /* stack */
-    align-items: start;
+    grid-template-columns: 1fr;  /* 한 줄 */
+    align-items: center;         /* 모든 항목 수직 중앙 */
     gap: 16px;
+    text-align: center;          /* hero 내부 텍스트 중앙 */
   }
 
+  /* 이미지 중앙 */
   .hero-left .avatar,
   .hero img {
     width: 140px;
     height: 140px;
-    margin: 0 auto; /* center image on mobile */
+    margin: 0 auto; /* 가운데 */
   }
 
+  /* 설명 중앙 */
   .hero-right {
-    text-align: center; /* center text on mobile */
+    text-align: center;
+    align-items: center; /* flex 아이템 가로 중앙 */
   }
 }
 
