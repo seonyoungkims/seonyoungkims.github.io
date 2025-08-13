@@ -44,6 +44,7 @@ body {
 .page-links {
   text-align: center;
   margin-bottom: 24px;
+  flex-wrap: nowrap;
 }
 
 .page-links a {
