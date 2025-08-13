@@ -39,6 +39,31 @@ body {
 }
 
 /* =========================
+   Page Links under name
+========================= */
+.page-links {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.page-links a {
+  display: inline-block;
+  margin: 4px 6px;
+  padding: 6px 12px;
+  font-size: 0.95rem;
+  color: var(--link);
+  border: 1px solid var(--link);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.page-links a:hover {
+  background: var(--link);
+  color: #fff;
+}
+
+/* =========================
    Hero (Left photo / Right text)
 ========================= */
 .hero {
