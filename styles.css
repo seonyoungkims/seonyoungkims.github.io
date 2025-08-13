@@ -1,50 +1,54 @@
-/* ===== Base ===== */
+/* =========================
+   Base
+========================= */
 :root {
   --max-width: 860px;
   --text-color: #222;
   --muted: #666;
+  --bg: #fff;
   --link: #0b57d0;
   --link-hover: #0846a8;
   --border: #e5e7eb;
 }
 
 * { box-sizing: border-box; }
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
+html, body { margin: 0; padding: 0; }
 body {
   font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-color);
-  background: #fff;
+  background: var(--bg);
 }
 
-/* ===== Layout ===== */
+/* =========================
+   Layout
+========================= */
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 24px;
 }
 
-/* ===== Page Title (Centered at top) ===== */
+/* =========================
+   Page Title (FULL-CENTER)
+========================= */
 .page-title {
-  text-align: center;
+  text-align: center;           /* 가로 중앙 */
   font-size: 2rem;
   line-height: 1.2;
   margin: 8px 0 24px;
 }
 
-/* ===== Hero (Left photo, Right description) ===== */
+/* =========================
+   Hero (Left photo / Right text)
+========================= */
 .hero {
   display: grid;
-  grid-template-columns: 180px 1fr; /* left fixed, right fluid */
+  grid-template-columns: 180px 1fr;  /* 왼쪽 고정폭, 오른쪽 가변 */
   gap: 24px;
-  align-items: center;
+  align-items: center;               /* 세로 중간 정렬 */
 }
 
-/* left: image */
+/* 왼쪽: 사진 */
 .hero-left .avatar,
 .hero img {
   width: 180px;
@@ -54,18 +58,17 @@ body {
   display: block;
 }
 
-/* right: text block */
+/* 오른쪽: 설명 텍스트 블록 */
 .hero-right {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+.hero-right p { margin: 0 0 8px; }
 
-.hero-right p {
-  margin: 0 0 8px;
-}
-
-/* ===== Sections ===== */
+/* =========================
+   Sections
+========================= */
 h2 {
   margin: 40px 0 12px;
   font-size: 1.25rem;
@@ -76,23 +79,21 @@ h2 {
   padding-left: 0;
   margin: 0;
 }
+.list li { margin: 8px 0; }
 
-.list li {
-  margin: 8px 0;
-}
-
-/* ===== Links ===== */
+/* =========================
+   Links
+========================= */
 a {
   color: var(--link);
   text-decoration: none;
 }
-
 a:hover, a:focus {
-  text-decoration: underline;
   color: var(--link-hover);
+  text-decoration: underline;
 }
 
-/* ===== Minor utilities ===== */
+/* 보조 유틸 */
 .muted { color: var(--muted); }
 .hr {
   height: 1px;
@@ -100,48 +101,47 @@ a:hover, a:focus {
   margin: 24px 0;
 }
 
-/* ===== Responsive ===== */
+/* =========================
+   Responsive (Mobile)
+========================= */
 @media (max-width: 720px) {
   .container { padding: 20px; }
 
-  /* 제목 중앙 */
-  .page-title { 
+  .page-title {
     font-size: 1.75rem;
     margin: 4px 0 20px;
-    text-align: center; /* 모바일에서 가운데 정렬 */
+    text-align: center;         /* 모바일에서도 확실히 중앙 */
   }
 
-  /* hero 세로 스택 */
   .hero {
-    grid-template-columns: 1fr;  /* 한 줄 */
-    align-items: center;         /* 모든 항목 수직 중앙 */
+    grid-template-columns: 1fr; /* 세로 스택: 사진 → 설명 */
     gap: 16px;
-    text-align: center;          /* hero 내부 텍스트 중앙 */
+    text-align: center;         /* hero 내부 텍스트 중앙 */
+    align-items: center;
   }
 
-  /* 이미지 중앙 */
   .hero-left .avatar,
   .hero img {
     width: 140px;
     height: 140px;
-    margin: 0 auto; /* 가운데 */
+    margin: 0 auto;             /* 사진 중앙 */
   }
 
-  /* 설명 중앙 */
   .hero-right {
-    text-align: center;
-    align-items: center; /* flex 아이템 가로 중앙 */
+    align-items: center;        /* 설명 블록 중앙 */
   }
 }
 
-/* ===== Optional: Dark Mode (auto) ===== */
+/* =========================
+   Optional: Dark Mode
+========================= */
 /* @media (prefers-color-scheme: dark) {
   :root {
     --text-color: #eaeaea;
     --muted: #a0a0a0;
+    --bg: #0f1115;
     --link: #8ab4ff;
     --link-hover: #a9c6ff;
     --border: #333;
   }
-  body { background: #0f1115; }
 } */
