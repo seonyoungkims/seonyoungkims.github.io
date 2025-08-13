@@ -53,7 +53,8 @@ body {
   padding: 6px 12px;
   font-size: clamp(0.8rem, 1.5vw, 0.95rem);  /* 화면 좁아지면 글자 축소 */
   color: var(--link);
-  border: 1px solid var(--link);
+/*   border: 1px solid var(--link); */
+  border: none;
   border-radius: 6px;
   text-decoration: none;
   transition: all 0.2s ease;
