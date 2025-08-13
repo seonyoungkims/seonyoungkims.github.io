@@ -1,34 +1,140 @@
-:root { --max: 860px; }
-body { margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
-.container { max-width: var(--max); margin: 0 auto; padding: 24px; }
-/* .hero { display: grid; grid-template-columns: 180px 1fr; gap: 24px; align-items: center; } */
+/* ===== Base ===== */
+:root {
+  --max-width: 860px;
+  --text-color: #222;
+  --muted: #666;
+  --link: #0b57d0;
+  --link-hover: #0846a8;
+  --border: #e5e7eb;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 16px/1.65 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-color);
+  background: #fff;
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* ===== Page Title (Centered at top) ===== */
+.page-title {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 8px 0 24px;
+}
+
+/* ===== Hero (Left photo, Right description) ===== */
 .hero {
   display: grid;
-  grid-template-columns: 180px 1fr;
+  grid-template-columns: 180px 1fr; /* left fixed, right fluid */
   gap: 24px;
   align-items: center;
 }
 
-.avatar {
+/* left: image */
+.hero-left .avatar,
+.hero img {
   width: 180px;
   height: 180px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 10px;
+  display: block;
 }
 
-.centered-name {
-  text-align: center; /* 텍스트 중앙 정렬 */
-  margin: 0;          /* 위아래 여백 최소화 */
-}
-
+/* right: text block */
 .hero-right {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* 수직 가운데 정렬 */
+  justify-content: center;
 }
-.hero img { width: 180px; height: 180px; object-fit: cover; border-radius: 10px; }
-h1 { margin: 0 0 8px; }
-h2 { margin-top: 40px; }
-.list { list-style: none; padding-left: 0; }
-.list li { margin: 8px 0; }
-@media (max-width: 720px) { .hero { grid-template-columns: 1fr; } .hero img { width: 140px; height: 140px; } }
+
+.hero-right p {
+  margin: 0 0 8px;
+}
+
+/* ===== Sections ===== */
+h2 {
+  margin: 40px 0 12px;
+  font-size: 1.25rem;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.list li {
+  margin: 8px 0;
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+  color: var(--link-hover);
+}
+
+/* ===== Minor utilities ===== */
+.muted { color: var(--muted); }
+.hr {
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 720px) {
+  .container { padding: 20px; }
+
+  .page-title { 
+    font-size: 1.75rem;
+    margin: 4px 0 20px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;  /* stack */
+    align-items: start;
+    gap: 16px;
+  }
+
+  .hero-left .avatar,
+  .hero img {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto; /* center image on mobile */
+  }
+
+  .hero-right {
+    text-align: center; /* center text on mobile */
+  }
+}
+
+/* ===== Optional: Dark Mode (auto) ===== */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #eaeaea;
+    --muted: #a0a0a0;
+    --link: #8ab4ff;
+    --link-hover: #a9c6ff;
+    --border: #333;
+  }
+  body { background: #0f1115; }
+} */
