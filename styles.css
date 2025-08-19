@@ -181,6 +181,22 @@ a:hover, a:focus {
   }
 }
 
+/* 기존 스타일들 ... */
+
+/* === Publications card layout === */
+.pub-card {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.pub-card img {
+  width: 150px;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
 /* =========================
    Optional: Dark Mode
 ========================= */
