@@ -356,6 +356,29 @@ a:hover, a:focus {
   font-style: italic;
 }
 
+/* Extracurricular Activities 스타일 */
+.activities-list {
+  margin: 0;
+  padding: 0;
+}
+
+.activity-item {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.activity-title {
+  font-weight: 600;   /* 활동명 강조 */
+}
+
+.activity-org {
+  color: #444;        /* 기관은 중간 톤 */
+}
+
+.activity-date {
+  color: #666;        /* 날짜는 살짝 흐리게 */
+  font-style: italic;
+}
 
 /* =========================
    Optional: Dark Mode
