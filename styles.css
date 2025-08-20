@@ -307,6 +307,31 @@ a:hover, a:focus {
   margin-top: 5px;
 }
 
+/* Honors & Scholarships 스타일 */
+.honors-list {
+  margin: 0;
+  padding: 0;
+}
+
+.honor-item {
+  margin-bottom: 8px;   /* 항목 간격 */
+  font-size: 0.95rem;
+}
+
+.honor-title {
+  font-weight: 600;     /* 상/장학금 이름 강조 */
+}
+
+.honor-org {
+  color: #444;          /* 기관은 일반 톤 */
+}
+
+.honor-date {
+  color: #666;          /* 날짜는 살짝 흐리게 */
+  font-style: italic;
+}
+
+
 /* =========================
    Optional: Dark Mode
 ========================= */
