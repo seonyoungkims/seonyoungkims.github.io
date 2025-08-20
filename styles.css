@@ -287,6 +287,26 @@ a:hover, a:focus {
     max-width: 420px;             /* 모바일에서 너무 커지지 않도록 */
   }
 }
+
+/* Talks & Presentations 큰 항목 (Internal Seminar, Graduate Seminar) 불렛 제거 */
+#talks .timeline {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+}
+
+#talks .timeline > li {
+  list-style: none;       /* 큰 항목 불렛 제거 */
+  margin-bottom: 20px;
+}
+
+/* 내부 Presented papers 리스트는 기본 불렛 유지 */
+#talks .timeline ul {
+  list-style: disc;       /* 기본 불렛 */
+  padding-left: 20px;     /* 들여쓰기 */
+  margin-top: 5px;
+}
+
 /* =========================
    Optional: Dark Mode
 ========================= */
