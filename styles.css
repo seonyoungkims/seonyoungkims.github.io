@@ -137,6 +137,38 @@ a:hover, a:focus {
   margin: 24px 0;
 }
 
+/* ==========================================================================
+   (B) Academic & Research Background  —  타임라인/리스트 스타일
+   - 사용 컴포넌트: #background, .timeline, .timeline-header, .timeline-body
+   - 학부 → 석사 → 회사 순의 스토리라인을 스캔 가능하게 표현
+   ========================================================================== */
+#background .timeline {
+  list-style: none;           /* 기본 불릿 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+#background .timeline li {
+  margin-bottom: 20px;        /* 항목 간 간격 */
+}
+
+#background .timeline-header {
+  font-weight: 600;           /* "지위 | 기관 | 기간" 라인 강조 */
+  margin-bottom: 5px;
+}
+
+#background .timeline-header a {
+  text-decoration: none;
+  color: inherit;
+}
+#background .timeline-header a:hover { text-decoration: underline; }
+
+#background .timeline-body {
+  margin-left: 15px;          /* 헤더 대비 살짝 들여쓰기 */
+  color: #444;
+  line-height: 1.5;
+}
+
 /* =========================
    Responsive (Mobile)
 ========================= */
