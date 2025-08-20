@@ -332,6 +332,30 @@ a:hover, a:focus {
   font-style: italic;
 }
 
+/* Teaching Assistant 스타일 */
+.teaching-list {
+  margin: 0;
+  padding: 0;
+}
+
+.teaching-item {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.teaching-title {
+  font-weight: 600;   /* 과목명 강조 */
+}
+
+.teaching-org {
+  color: #444;        /* 기관은 중간 톤 */
+}
+
+.teaching-date {
+  color: #666;        /* 날짜는 약간 흐리게 */
+  font-style: italic;
+}
+
 
 /* =========================
    Optional: Dark Mode
