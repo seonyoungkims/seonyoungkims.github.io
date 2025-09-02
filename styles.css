@@ -303,12 +303,27 @@ a:hover, a:focus {
   row-gap: 8px;
 }
 
+/* ADD: 제목/저자/학회/링크 간격 타이트하게 */
+#publications .media-title,
+#publications .media-authors,
+#publications .media-meta,
+#publications .media-paper {
+  margin: 2px 0;    /* 위아래 2px로 축소 */
+  line-height: 1.35; /* 줄간격도 살짝 타이트하게 */
+}
+
+
 /* 각 요소를 grid 영역에 명시적으로 매핑 (중요) */
 #publications .media-title   { grid-area: title;   margin: 0; }
 #publications .media-authors { grid-area: authors; margin: 0; }
 #publications .media-meta    { grid-area: meta;    margin: 0; }
 #publications .media-paper   { grid-area: paper;   margin: 0; }
 #publications .media-desc    { grid-area: desc;    margin: 0; }
+/* ADD: 설명은 위쪽만 조금 띄우기 */
+#publications .media-desc {
+  margin-top: 8px;
+}
+
 
 /* 이미지: float/인라인 영향 제거 + 전체 폭 사용 */
 #publications .media-thumb {
