@@ -280,19 +280,29 @@ a:hover, a:focus {
   }
 }
 
-/* ===== Publications 섹션 전용 ===== */
 
-/* (선택) 리스트 불릿/여백 제거 — publications만 적용하고 싶으면 projects는 빼도 됨 */
+/* ===== Publications 섹션 전용 (DROP-IN) ===== */
+
+/* 불릿/여백 제거 */
 #publications .list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* 전역 flex/float 무력화: 퍼블리케이션은 세로 스택 + 그리드만 사용 */
+#publications .media-item {
+  display: block !important;
+}
+#publications .media-thumb {
+  float: none !important;
+  display: block;
+}
+
 /* 1열 Grid로 순서 고정: 제목 → 저자 → 학회 → Paper → 그림 → 설명 */
 #publications .media-info {
   display: grid !important;
-  grid-template-columns: 1fr; /* 한 줄 전체 */
+  grid-template-columns: 1fr;
   grid-template-areas:
     "title"
     "authors"
@@ -300,40 +310,33 @@ a:hover, a:focus {
     "paper"
     "thumb"
     "desc";
-  row-gap: 8px;
+  row-gap: 4px;  /* 간격 압축 (기존 12px → 4px) */
 }
 
-/* ADD: 제목/저자/학회/링크 간격 타이트하게 */
+/* ★ grid-area만 지정 — margin은 여기서 절대 넣지 말 것 */
+#publications .media-title   { grid-area: title; }
+#publications .media-authors { grid-area: authors; }
+#publications .media-meta    { grid-area: meta; }
+#publications .media-paper   { grid-area: paper; }
+#publications .media-thumb   {
+  grid-area: thumb;
+  width: 100%;
+  max-width: 600px;     /* 필요 시 조정 */
+  height: auto;
+  justify-self: start;
+}
+#publications .media-desc    { grid-area: desc; }
+
+/* 간격 타이트하게 (여기가 최종 우선순위가 되도록 ★맨 아래에 둠) */
 #publications .media-title,
 #publications .media-authors,
 #publications .media-meta,
 #publications .media-paper {
-  margin: 2px 0;    /* 위아래 2px로 축소 */
-  line-height: 1.35; /* 줄간격도 살짝 타이트하게 */
+  margin: 2px 0 !important;
+  line-height: 1.35;
 }
-
-
-/* 각 요소를 grid 영역에 명시적으로 매핑 (중요) */
-#publications .media-title   { grid-area: title;   margin: 0; }
-#publications .media-authors { grid-area: authors; margin: 0; }
-#publications .media-meta    { grid-area: meta;    margin: 0; }
-#publications .media-paper   { grid-area: paper;   margin: 0; }
-#publications .media-desc    { grid-area: desc;    margin: 0; }
-/* ADD: 설명은 위쪽만 조금 띄우기 */
 #publications .media-desc {
-  margin-top: 8px;
-}
-
-
-/* 이미지: float/인라인 영향 제거 + 전체 폭 사용 */
-#publications .media-thumb {
-  grid-area: thumb;
-  display: block;
-  float: none !important;
-  width: 100%;
-  max-width: 600px;   /* 상한 (원하면 더 키워도 됨) */
-  height: auto;
-  justify-self: start;
+  margin-top: 8px !important;  /* 이미지와 설명 사이만 살짝 띄움 */
 }
 
 
