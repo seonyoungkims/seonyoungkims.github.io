@@ -215,15 +215,15 @@ a:hover, a:focus {
 
 /* 기존 스타일들 ... */
 
-/* === Media row layout used by Publications & Projects === */
-.media-item {
+/* === Media row layout used by Projects ONLY === */
+#projects .media-item {
   display: flex;
   align-items: flex-start;        /* 이미지와 텍스트 상단 정렬 */
   gap: 16px;                      /* 이미지-텍스트 간격 */
   margin-bottom: 18px;
 }
 
-.media-thumb {
+#projects .media-thumb {
   width: 140px;                   /* 썸네일 기본 너비 */
   flex: 0 0 auto;                 /* 크기 고정 */
   border: 1px solid #ddd;
@@ -231,41 +231,53 @@ a:hover, a:focus {
   background: #fff;
 }
 
-.media-info { 
+#projects .media-info { 
   flex: 1 1 auto;                 /* 텍스트 영역이 남는 공간을 차지 */
-  min-width: 0;                   /* 긴 링크/단어 줄바꿈 허용을 위해 */
+  min-width: 0;                   /* 긴 링크/단어 줄바꿈 허용 */
 }
 
-.media-title {
+#projects .media-title {
   font-size: 1.02rem;
   line-height: 1.35;
   margin: 0 0 4px 0;
 }
 
-.media-title a {
+#projects .media-title a {
   text-decoration: none;
   color: inherit;
 }
 
-.media-title a:hover {
+#projects .media-title a:hover {
   text-decoration: underline;
 }
 
-.media-meta {
+#projects .media-meta {
   margin: 0 0 6px 0;
   color: #666;
 }
 
-.media-desc {
+#projects .media-desc {
   margin: 0 0 8px 0;
 }
 
-.media-links a {
+#projects .media-links a {
   text-decoration: none;
 }
 
-.media-links a:hover {
+#projects .media-links a:hover {
   text-decoration: underline;
+}
+
+/* ✨ 반응형: 화면이 좁으면 세로 스택으로 자동 전환 */
+@media (max-width: 640px) {
+  #projects .media-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #projects .media-thumb {
+    width: 100%;
+    max-width: 420px;             /* 모바일에서 너무 커지지 않도록 */
+  }
 }
 
 /* ✨ 반응형: 화면이 좁으면 세로 스택으로 자동 전환 */
