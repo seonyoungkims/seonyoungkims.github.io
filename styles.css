@@ -288,62 +288,60 @@ a:hover, a:focus {
   }
 }
 
-/* ===== Publications 전용 기본 레이아웃 ===== */
+/* ===== Publications 섹션 전용 ===== */
 #publications .media-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
+  list-style: none;
+  margin: 0 0 24px 0;
 }
 
-#publications .media-thumb {
-  width: 220px;       /* 데스크톱에서 이미지 조금 키우기 */
-  height: auto;
-  flex-shrink: 0;
+/* 그리드 래핑 (접근성 순서를 DOM 그대로 유지) */
+#publications .media-info {
+  display: grid;
+  grid-template-columns: 240px 1fr;        /* 데스크톱: 좌 240px(이미지), 우 텍스트 */
+  grid-template-areas:
+    "title   title"
+    "authors authors"
+    "meta    meta"
+    "paper   paper"
+    "thumb   desc";                        /* 이미지-설명은 가로로 배치 */
+  column-gap: 16px;
+  row-gap: 8px;
 }
 
-/* ===== 모바일: 제목 → 이미지 → 나머지 순서로 재배치 ===== */
-@media (max-width: 640px) {
-  #publications .media-item {
-    display: flex;
-    flex-wrap: wrap;    /* 줄바꿈 허용 */
-    gap: 12px;
-  }
+/* 그리드 영역 매핑 */
+#publications .media-title   { grid-area: title;  margin: 0; }
+#publications .media-authors { grid-area: authors; margin: 0; }
+#publications .media-meta    { grid-area: meta;    margin: 0; }
+#publications .media-paper   { grid-area: paper;   margin: 0 0 4px 0; }
+#publications .media-thumb   { grid-area: thumb;   width: 100%; height: auto; display: block; }
+#publications .media-desc    { grid-area: desc;    margin: 0; }
 
-  /* 핵심: media-info의 자식들을 상위 flex 컨테이너의 형제로 승격 */
-  #publications .media-info {
-    display: contents;
-  }
-
-  /* 순서 제어: 제목 먼저 */
-  #publications .media-title {
-    order: 0;
-    margin-bottom: 2px;
-  }
-
-  /* 이미지가 두 번째 */
+/* 이미지 기본 폭 제어 (데스크톱) */
+@media (min-width: 641px) {
   #publications .media-thumb {
-    order: 1;
-    width: 100%;
-    max-width: 420px;
-    height: auto;
-  }
-
-  /* 나머지 정보(저자/학회/Paper 링크/설명)는 그 다음 */
-  #publications .media-authors,
-  #publications .media-meta,
-  #publications .media-paper,
-  #publications .media-desc {
-    order: 2;
-  }
-
-  /* 세로 스택 느낌으로 폭 채우기 */
-  #publications .media-authors,
-  #publications .media-meta,
-  #publications .media-paper,
-  #publications .media-desc {
-    width: 100%;
+    max-width: 240px;   /* 좌측 컬럼 폭과 동일 */
   }
 }
+
+/* 모바일: 1열로 세로 스택 (요청 순서 그대로) */
+@media (max-width: 640px) {
+  #publications .media-info {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "authors"
+      "meta"
+      "paper"
+      "thumb"
+      "desc";
+  }
+  #publications .media-thumb {
+    max-width: 420px;  /* 너무 커지지 않게 */
+    width: 100%;
+    justify-self: start;
+  }
+}
+
 
 /* Talks & Presentations: 큰 항목 불렛 제거 */
 #talks .timeline {
