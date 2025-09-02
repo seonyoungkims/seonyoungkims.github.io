@@ -281,16 +281,22 @@ a:hover, a:focus {
 }
 
 /* ===== Publications 섹션 전용 ===== */
-/* 리스트 기본 여백 정리(선택) */
-#publications .list,
-#projects .list {
+
+/* (선택) 리스트 불릿/여백 제거 — publications만 적용하고 싶으면 projects는 빼도 됨 */
+#publications .list {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
+/* 과거 flex/inline-block/float 영향 제거: 항상 세로 스택 */
+#publications .media-item {
+  display: block !important;            /* flex로 깔린 규칙 무력화 */
+}
+
+/* 1열 Grid로 순서 고정: 제목 → 저자 → 학회 → Paper → 그림 → 설명 */
 #publications .media-info {
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr; /* 한 줄 전체 */
   grid-template-areas:
     "title"
@@ -302,17 +308,24 @@ a:hover, a:focus {
   row-gap: 12px;
 }
 
+/* 각 요소를 grid 영역에 명시적으로 매핑 (중요) */
+#publications .media-title   { grid-area: title;   margin: 0; }
+#publications .media-authors { grid-area: authors; margin: 0; }
+#publications .media-meta    { grid-area: meta;    margin: 0; }
+#publications .media-paper   { grid-area: paper;   margin: 0; }
+#publications .media-desc    { grid-area: desc;    margin: 0; }
+
+/* 이미지: float/인라인 영향 제거 + 전체 폭 사용 */
 #publications .media-thumb {
   grid-area: thumb;
-  width: 100%;         /* 전체 폭 */
-  max-width: 800px;    /* 너무 커지지 않도록 상한 */
+  display: block;
+  float: none !important;
+  width: 100%;
+  max-width: 800px;   /* 상한 (원하면 더 키워도 됨) */
   height: auto;
   justify-self: start;
 }
 
-#publications .media-desc {
-  grid-area: desc;
-}
 
 
 
