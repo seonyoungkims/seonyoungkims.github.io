@@ -288,6 +288,63 @@ a:hover, a:focus {
   }
 }
 
+/* ===== Publications 전용 기본 레이아웃 ===== */
+#publications .media-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+#publications .media-thumb {
+  width: 220px;       /* 데스크톱에서 이미지 조금 키우기 */
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* ===== 모바일: 제목 → 이미지 → 나머지 순서로 재배치 ===== */
+@media (max-width: 640px) {
+  #publications .media-item {
+    display: flex;
+    flex-wrap: wrap;    /* 줄바꿈 허용 */
+    gap: 12px;
+  }
+
+  /* 핵심: media-info의 자식들을 상위 flex 컨테이너의 형제로 승격 */
+  #publications .media-info {
+    display: contents;
+  }
+
+  /* 순서 제어: 제목 먼저 */
+  #publications .media-title {
+    order: 0;
+    margin-bottom: 2px;
+  }
+
+  /* 이미지가 두 번째 */
+  #publications .media-thumb {
+    order: 1;
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  /* 나머지 정보(저자/학회/Paper 링크/설명)는 그 다음 */
+  #publications .media-authors,
+  #publications .media-meta,
+  #publications .media-paper,
+  #publications .media-desc {
+    order: 2;
+  }
+
+  /* 세로 스택 느낌으로 폭 채우기 */
+  #publications .media-authors,
+  #publications .media-meta,
+  #publications .media-paper,
+  #publications .media-desc {
+    width: 100%;
+  }
+}
+
 /* Talks & Presentations: 큰 항목 불렛 제거 */
 #talks .timeline {
   list-style: none;   /* ul 자체 기본 불렛 제거 */
