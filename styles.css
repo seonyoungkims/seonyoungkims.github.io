@@ -280,18 +280,6 @@ a:hover, a:focus {
   }
 }
 
-/* ✨ 반응형: 화면이 좁으면 세로 스택으로 자동 전환 */
-@media (max-width: 640px) {
-  .media-item {
-    flex-direction: column;
-    align-items: stretch;
-  }
-  .media-thumb {
-    width: 100%;
-    max-width: 420px;             /* 모바일에서 너무 커지지 않도록 */
-  }
-}
-
 /* ===== Publications 섹션 전용 ===== */
 
 /* (선택) 리스트 불릿/여백 제거 — publications만 적용하고 싶으면 projects는 빼도 됨 */
@@ -333,7 +321,7 @@ a:hover, a:focus {
   display: block;
   float: none !important;
   width: 100%;
-  max-width: 800px;   /* 상한 (원하면 더 키워도 됨) */
+  max-width: 700px;   /* 상한 (원하면 더 키워도 됨) */
   height: auto;
   justify-self: start;
 }
