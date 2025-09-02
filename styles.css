@@ -321,7 +321,7 @@ a:hover, a:focus {
 #publications .media-thumb   {
   grid-area: thumb;
   width: 100%;
-  max-width: 600px;     /* 필요 시 조정 */
+  max-width: 700px;     /* 필요 시 조정 */
   height: auto;
   justify-self: center;
 }
