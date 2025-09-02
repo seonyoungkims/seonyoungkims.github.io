@@ -321,9 +321,9 @@ a:hover, a:focus {
 #publications .media-thumb   {
   grid-area: thumb;
   width: 100%;
-  max-width: 500px;     /* 필요 시 조정 */
+  max-width: 600px;     /* 필요 시 조정 */
   height: auto;
-  justify-self: start;
+  justify-self: center;
 }
 #publications .media-desc    { grid-area: desc; }
 
@@ -334,6 +334,7 @@ a:hover, a:focus {
 #publications .media-paper {
   margin: 2px 0 !important;
   line-height: 1.35;
+  margin-bottom: 8px !important; /* 원하는 만큼 조절 (예: 8~12px) */
 }
 #publications .media-desc {
   margin-top: 8px !important;  /* 이미지와 설명 사이만 살짝 띄움 */
