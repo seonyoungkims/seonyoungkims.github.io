@@ -222,9 +222,7 @@ a:hover, a:focus {
 }
 
 .project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  display: block;        /* 기본값, 굳이 안 써도 됨 */
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -234,8 +232,10 @@ a:hover, a:focus {
 }
 
 .project-period {
+  display: block;        /* 줄바꿈 강제 */
+  margin-top: 3px;       /* 제목과 간격 살짝 */
   color: #666;
-  font-size: 0.95em;
+  font-size: 0.9em;
 }
 
 .project-image img {
