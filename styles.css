@@ -287,7 +287,7 @@ a:hover, a:focus {
 /* 전역 flex/float 무력화: 퍼블리케이션은 세로 스택 + 그리드만 사용 */
 #publications .media-item {
   display: block !important;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 #publications .media-thumb {
   float: none !important;
