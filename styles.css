@@ -42,7 +42,7 @@ body {
 .page-links {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;              /* 한 줄 유지 */
+  flex-wrap: wrap;              /* 한 줄 유지 */
   gap: 8px;
   margin-bottom: 24px;
 }
