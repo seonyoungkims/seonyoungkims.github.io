@@ -231,66 +231,11 @@ a:hover, a:focus {
 ========================= */
 
 /* 각 프로젝트 카드 */
-#projects .project-item {
-  max-width: 700px;
-  margin: 0;
-  list-style: none;
-  margin-bottom: 30px;
-}
-
-/* 카드 사이 간격: 마지막은 생략 */
-#projects .project-item:not(:last-child) {
-  margin-bottom: 36px;     /* 원하는 값 (예: 36px) */
-}
-
-/* 헤더 (제목+기간 묶음) */
-#projects .project-header {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 12px;     /* 제목과 아래 이미지 간격 */
-}
-
-/* 제목 */
-#projects .project-title {
-  font-size: 1.2em;
-}
-
-/* 기간 */
-#projects .project-period {
-  display: block;          /* 줄바꿈 강제 */
-  margin-top: 3px;
-  color: #666;
-  font-size: 0.9em;
-}
-
-/* 이미지 */
-#projects .project-image {
-  margin-bottom: 12px;     /* 이미지와 설명 사이 여백 */
-}
-#projects .project-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 0;        /* 불필요한 여백 제거 */
-}
-
-/* 설명 */
-#projects .project-desc {
-  color: #444;
-  line-height: 1.6;
-}
-#projects .project-desc > p {
-  margin: 0 0 10px;
-}
-#projects .project-desc > p:last-child {
-  margin-bottom: 0;
-}
-
-
-/* .project-item {
+.project-item {
   max-width: 700px;
   margin: 40px auto;
   list-style: none;
+  margin-bottom: 30px;
 }
 
 .project-header {
@@ -320,7 +265,7 @@ a:hover, a:focus {
 .project-desc {
   color: #444;
   line-height: 1.6;
-} */
+}
 
 /* ✨ 반응형: 화면이 좁으면 세로 스택으로 자동 전환 */
 @media (max-width: 640px) {
