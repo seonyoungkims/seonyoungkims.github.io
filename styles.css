@@ -281,7 +281,7 @@ a:hover, a:focus {
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-bottom: 200px;
+  margin-bottom: 40px;
 }
 
 /* 전역 flex/float 무력화: 퍼블리케이션은 세로 스택 + 그리드만 사용 */
