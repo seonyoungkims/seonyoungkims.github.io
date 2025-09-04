@@ -250,7 +250,7 @@ a:hover, a:focus {
 
 .project-period {
   display: block;        /* 줄바꿈 강제 */
-  margin-top: 3px;       /* 제목과 간격 살짝 */
+  margin-top: 0;       /* 제목과 간격 기본 */
   color: #666;
   font-size: 0.9em;
 }
