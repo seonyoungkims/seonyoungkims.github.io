@@ -246,6 +246,7 @@ a:hover, a:focus {
 
 .project-title {
   font-size: 1.2em;
+  margin-bottom: 0; /* 제목의 기본 아래쪽 여백을 제거합니다 */
 }
 
 .project-period {
