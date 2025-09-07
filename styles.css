@@ -176,7 +176,6 @@ a:hover, a:focus {
 
 #background .timeline-header a {
   text-decoration: none;
-  color: inherit;
 }
 #background .timeline-header a:hover { text-decoration: underline; }
 
