@@ -130,7 +130,7 @@ h2::after {
 
 # period
 .header-period {
-  margin-top: 5px;  /* 위쪽 정보와의 간격 */
+  margin-bottom: 5px;  /* 위쪽 정보와의 간격 */
   color: #666;       /* 약간 연한 색상으로 */
   /*   font-size: 0.9em; /* 약간 작게 */ */
 }
@@ -398,16 +398,8 @@ a:hover, a:focus {
   font-weight: 600;     /* 상/장학금 이름 강조 */
 }
 
-.honor-org {
-/*   color: #444;          /* 기관은 일반 톤 */ */
-}
-
-.honor-date {
-/*   color: #666;          /* 날짜는 살짝 흐리게 */ */
-/*   font-style: italic; */
-}
 .honor-description {
-  margin-left: 8px;      /* 들여쓰기 */
+  margin-left: 4px;      /* 들여쓰기 */
 }
 
 /* Teaching Assistant 스타일 */
