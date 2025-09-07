@@ -233,7 +233,7 @@ a:hover, a:focus {
 /* 각 프로젝트 카드 */
 .project-item {
   max-width: var(--max-width);
-  margin: 0 0 30px;
+  margin: 0 0 35px;
   list-style: none;
 }
 
