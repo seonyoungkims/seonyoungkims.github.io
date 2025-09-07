@@ -405,7 +405,7 @@ a:hover, a:focus {
 }
 
 .honor-description {
-  margin-left: 2px;      /* 들여쓰기 */
+  margin-left: 15px;      /* 들여쓰기 */
   list-style: none; /* 이 줄을 추가하여 불렛을 제거합니다. */
 }
 
