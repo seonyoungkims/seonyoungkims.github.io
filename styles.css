@@ -128,6 +128,13 @@ h2::after {
 }
 /* .list li { margin: 8px 0; } */
 
+# period
+.header-period {
+  margin-top: 5px;  /* 위쪽 정보와의 간격 */
+  color: #666;       /* 약간 연한 색상으로 */
+  /*   font-size: 0.9em; /* 약간 작게 */ */
+}
+
 /* =========================
    Links
 ========================= */
@@ -176,7 +183,7 @@ a:hover, a:focus {
 
 #background .timeline-body {
   margin-left: 15px;          /* 헤더 대비 살짝 들여쓰기 */
-  color: #444;
+/*   color: #444; */
   line-height: 1.5;
 }
 
@@ -400,7 +407,7 @@ a:hover, a:focus {
 /*   font-style: italic; */
 }
 .honor-description {
-  margin-left: 12px;      /* 수상 내역과 설명 사이의 간격 */
+  margin-left: 8px;      /* 들여쓰기 */
 }
 
 /* Teaching Assistant 스타일 */
