@@ -186,6 +186,14 @@ a:hover, a:focus {
   line-height: 1.5;
 }
 
+#background .timeline li .timeline-header {
+  margin-bottom: 0; /* 헤더의 아래쪽 여백 제거 */
+}
+
+#background .timeline li .header-period {
+  margin-top: 0;    /* 기간의 위쪽 여백 제거 */
+}
+
 /* =========================
    Responsive (Mobile)
 ========================= */
