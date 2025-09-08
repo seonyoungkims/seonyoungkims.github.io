@@ -116,7 +116,16 @@ h2, h3 {
   flex-direction: column;
   justify-content: center;
 }
-.hero-right p { margin: 0 0 8px; }
+
+.hero-right p {
+  margin-bottom: 1em; /* '1em'은 현재 폰트 크기만큼의 높이를 의미합니다. */
+/*   line-height: 1.6;   /* 문단 내 줄 간격도 함께 설정하면 좋습니다. */ */
+}
+
+/* 마지막 문단에는 불필요한 아래쪽 여백을 제거하여 깔끔하게 만듭니다. */
+.hero-right p:last-child {
+  margin-bottom: 0;
+}
 
 /* =========================
    Sections
