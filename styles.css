@@ -118,7 +118,7 @@ h2, h3 {
 }
 
 .hero-right p {
-  margin-bottom: 1em; /* '1em'은 현재 폰트 크기만큼의 높이를 의미합니다. */
+  margin-bottom: 0.5em; /* '1em'은 현재 폰트 크기만큼의 높이를 의미합니다. */
 /*   line-height: 1.6;   /* 문단 내 줄 간격도 함께 설정하면 좋습니다. */ */
 }
 
@@ -454,9 +454,6 @@ a:hover, a:focus {
   margin-bottom: 20px;         /* 항목 간 간격 */
 }
 
-#honors .timeline-header {
-}
-
 #honors .timeline-header a,
 #honors .timeline-header span { /* a 태그 외에 span 태그도 색상 적용 */
   text-decoration: none;
@@ -468,7 +465,7 @@ a:hover, a:focus {
 }
 
 #honors .timeline-body {
-/*   margin-left: 15px;           /* 헤더 대비 살짝 들여쓰기 */ */
+  margin-left: 15px;           /* 헤더 대비 살짝 들여쓰기 */
   line-height: 1.5;
 }
 
