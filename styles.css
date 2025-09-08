@@ -130,7 +130,7 @@ h2::after {
 
 # period
 .header-period {
-  margin-bottom: 5px;  /* 위쪽 정보와의 간격 */
+  margin-bottom: 7px;  /* 위쪽 정보와의 간격 */
   color: #666;       /* 약간 연한 색상으로 */
   /*   font-size: 0.9em; /* 약간 작게 */ */
 }
