@@ -118,7 +118,7 @@ h2, h3 {
 }
 
 .hero-right p {
-  margin-bottom: 0.5em; /* '1em'은 현재 폰트 크기만큼의 높이를 의미합니다. */
+  margin-bottom: 0.1em; /* '1em'은 현재 폰트 크기만큼의 높이를 의미합니다. */
 /*   line-height: 1.6;   /* 문단 내 줄 간격도 함께 설정하면 좋습니다. */ */
 }
 
