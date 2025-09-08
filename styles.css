@@ -445,11 +445,11 @@ a:hover, a:focus {
 }
 
 .teaching-org {
-  color: #444;        /* 기관은 중간 톤 */
+/*   color: #444;         */
 }
 
 .teaching-date {
-  color: #666;        /* 날짜는 약간 흐리게 */
+/*   color: #666;       / */
   font-style: italic;
 }
 
