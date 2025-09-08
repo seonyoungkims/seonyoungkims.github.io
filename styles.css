@@ -427,9 +427,10 @@ a:hover, a:focus {
 
 /* Presented papers 아래 ul/li는 기본 불렛 유지 */
 #talks .timeline .timeline-body ul {
-  list-style: none;
+  list-style-type: disc;
+  list-style-position: outside;
   padding-left: 15px; /* 들여쓰기 */
-  margin-top: 3px;
+  margin-top: 0px;
 }
 
 #talks .timeline li .header-period {
