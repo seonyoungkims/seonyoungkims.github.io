@@ -285,8 +285,10 @@ a:hover, a:focus {
 }
 
 .project-period {
+  font-weight: normal;
   display: block;        /* 줄바꿈 강제 */
   margin-top: 0;       /* 제목과 간격 기본 */
+  font-style: italic;
 /*   color: #666; */
 /*   font-size: 0.9em; */
 }
