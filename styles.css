@@ -190,7 +190,6 @@ a:hover, a:focus {
 
 #background .timeline-body {
   margin-left: 15px;          /* 헤더 대비 살짝 들여쓰기 */
-/*   color: #444; */
   line-height: 1.5;
 }
 
@@ -201,6 +200,12 @@ a:hover, a:focus {
 #background .timeline li .header-period {
   margin-top: 0;    /* 기간의 위쪽 여백 제거 */
   font-style: italic;
+}
+
+#background .timeline-body ul {
+  list-style-type: none; /* 불렛(•) 제거 */
+  padding-left: 15px;       /* 왼쪽 기본 여백 제거 */
+  margin: 0;             /* 위아래 기본 여백 제거 */
 }
 
 /* =========================
