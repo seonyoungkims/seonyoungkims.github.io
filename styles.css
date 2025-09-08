@@ -160,7 +160,7 @@ a:hover, a:focus {
 .shortcuts nav {
   display: flex;       /* 플렉스박스 컨테이너로 지정 */
   flex-wrap: wrap;     /* 화면이 좁아지면 줄바꿈 허용 */
-  gap: 15px;           /* 아이템 사이의 간격을 15px로 지정 (원하는 만큼 조절) */
+  gap: 20px;           /* 아이템 사이의 간격을 15px로 지정 (원하는 만큼 조절) */
 }
 
 /* ==========================================================================
@@ -285,7 +285,7 @@ a:hover, a:focus {
 .project-period {
   display: block;        /* 줄바꿈 강제 */
   margin-top: 0;       /* 제목과 간격 기본 */
-  color: #666;
+/*   color: #666; */
   font-size: 0.9em;
 }
 
