@@ -383,9 +383,9 @@ a:hover, a:focus {
 
 /* Presented papers 아래 ul/li는 기본 불렛 유지 */
 #talks .timeline .timeline-body ul {
-/*   list-style: disc;   /* 기본 불렛 */ */
-  padding-left: 20px; /* 들여쓰기 */
-  margin-top: 6px;
+  list-style: none;
+  padding-left: 15px; /* 들여쓰기 */
+  margin-top: 3px;
 }
 
 
