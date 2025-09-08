@@ -452,7 +452,7 @@ a:hover, a:focus {
 
 #honors .timeline li {
   list-style: none;
-  margin-bottom: 200px;         /* 항목 간 간격 */
+  margin-bottom: 20px;         /* 항목 간 간격 */
 }
 
 #honors .timeline-header a,
