@@ -450,11 +450,11 @@ a:hover, a:focus {
 }
 
 #honors .timeline li {
+  list-style: none;
   margin-bottom: 20px;         /* 항목 간 간격 */
 }
 
 #honors .timeline-header {
-  font-weight: 600;            /* 라인 강조 */
 }
 
 #honors .timeline-header a,
@@ -494,9 +494,7 @@ a:hover, a:focus {
 }
 
 .teaching-date {
-/*   color: #666;       / */
   font-style: italic;
-/*   font-weight: bold; */
   font-size: 1.0rem;
 }
 
