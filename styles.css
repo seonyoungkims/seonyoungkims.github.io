@@ -465,7 +465,7 @@ a:hover, a:focus {
 }
 
 #honors .timeline-body {
-  margin-left: 0px;           /* 헤더 대비 들여쓰기 */
+  margin-left: 0;           /* 헤더 대비 들여쓰기 */
   line-height: 1.5;
 }
 
@@ -523,7 +523,7 @@ a:hover, a:focus {
 }
 
 #extracurricular-activities .timeline-body {
-  margin-left: 15px;
+  margin-left: 0;
   line-height: 1.5;
 }
 
