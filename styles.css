@@ -413,6 +413,10 @@ a:hover, a:focus {
   margin-top: 3px;
 }
 
+#talks .timeline li .header-period {
+  font-style: italic;
+}
+
 
 /* ==========================================================================
    (C) Honors & Scholarships  —  타임라인/리스트 스타일
