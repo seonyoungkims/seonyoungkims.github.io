@@ -155,6 +155,14 @@ a:hover, a:focus {
   margin: 24px 0;
 }
 
+/* Contents 설정 */
+/* a 태그를 감싸고 있는 nav 태그에 적용 */
+.shortcuts nav {
+  display: flex;       /* 플렉스박스 컨테이너로 지정 */
+  flex-wrap: wrap;     /* 화면이 좁아지면 줄바꿈 허용 */
+  gap: 15px;           /* 아이템 사이의 간격을 15px로 지정 (원하는 만큼 조절) */
+}
+
 /* ==========================================================================
    (B) Academic & Research Background  —  타임라인/리스트 스타일
    - 사용 컴포넌트: #background, .timeline, .timeline-header, .timeline-body
