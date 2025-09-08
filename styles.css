@@ -468,7 +468,7 @@ a:hover, a:focus {
 }
 
 #honors .timeline-body {
-  margin-left: 15px;           /* 헤더 대비 살짝 들여쓰기 */
+/*   margin-left: 15px;           /* 헤더 대비 살짝 들여쓰기 */ */
   line-height: 1.5;
 }
 
