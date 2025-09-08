@@ -423,6 +423,7 @@ a:hover, a:focus {
 
 #talks .timeline-header {
   margin: 0;
+}
    
 /* Presented papers 아래 ul/li는 기본 불렛 유지 */
 #talks .timeline .timeline-body ul {
