@@ -496,13 +496,13 @@ a:hover, a:focus {
 
 .teaching-org {
 /*   color: #444;         */
-   font-weight: bold;
+/*    font-weight: bold; */
 }
 
 .teaching-date {
 /*   color: #666;       / */
   font-style: italic;
-  font-weight: bold;
+/*   font-weight: bold; */
   font-size: 1.0rem;
 }
 
@@ -520,7 +520,7 @@ a:hover, a:focus {
 }
 
 #extracurricular-activities .timeline-header {
-  font-weight: 600;
+/*   font-weight: 600; */
 }
 
 #extracurricular-activities .timeline-header a,
