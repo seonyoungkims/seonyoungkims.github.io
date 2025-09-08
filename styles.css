@@ -413,24 +413,17 @@ a:hover, a:focus {
 }
 
 #talks .timeline-header {
-  /* <h3>의 기본 상하좌우 여백을 모두 제거 */
   margin: 0;
-  
-  /* 필요한 만큼의 하단 여백만 다시 추가 */
-/*   margin-bottom: 5px;  */
-
-  /* font-size와 font-weight도 여기서 명시적으로 제어할 수 있습니다.
-    font-size: 1.17em;
-    font-weight: bold;
-  */
-}
-
+   
 /* Presented papers 아래 ul/li는 기본 불렛 유지 */
 #talks .timeline .timeline-body ul {
   list-style-type: disc;
   list-style-position: outside;
   padding-left: 15px; /* 들여쓰기 */
   margin-top: 0px;
+  
+  /* ✨ 2. 리스트 전체를 오른쪽으로 밀 '바깥쪽' 여백 추가 */
+  margin-left: 25px;
 }
 
 #talks .timeline li .header-period {
@@ -489,15 +482,6 @@ a:hover, a:focus {
 .teaching-item {
   margin-bottom: 8px;
   font-size: 1.1rem;
-}
-
-.teaching-title {
-/*   font-weight: 600;   /* 과목명 강조 */ */
-}
-
-.teaching-org {
-/*   color: #444;         */
-/*    font-weight: bold; */
 }
 
 .teaching-date {
