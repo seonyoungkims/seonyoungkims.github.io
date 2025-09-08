@@ -1,6 +1,16 @@
 /* =========================
    Base
 ========================= */
+/* 본문 전체에는 Inter를 기본으로 지정합니다. */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* 제목(h2, h3)에는 Source Serif 4를 별도로 지정합니다. */
+h2, h3 {
+  font-family: 'Source Serif 3', serif;
+}
+
 :root {
   --max-width: 860px;
   --text-color: #222;
