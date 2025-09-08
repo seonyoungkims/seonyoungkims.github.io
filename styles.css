@@ -250,6 +250,19 @@ a:hover, a:focus {
   list-style: none;
 }
 
+/* .project-item 중 첫 번째 요소 안의 이미지만 선택 */
+.project-item:first-child .project-image img {
+  /* width 값을 조절해 이미지 크기를 줄입니다. (예: 80%) */
+  width: 80%;
+  
+  /* 이미지가 너무 커지지 않도록 최대 너비를 설정할 수도 있습니다. */
+  /* max-width: 500px; */
+
+  /* 가운데 정렬을 원할 경우 */
+  display: block;
+  margin: 0 auto;
+}
+
 .project-header {
   display: block;        /* 기본값, 굳이 안 써도 됨 */
   font-weight: 600;
