@@ -433,6 +433,7 @@ a:hover, a:focus {
 .teaching-list {
   margin: 0;
   padding: 0;
+  list-style-type: none; /* li 태그의 기본 점(•) 제거 */
 }
 
 .teaching-item {
@@ -450,7 +451,7 @@ a:hover, a:focus {
 
 .teaching-date {
 /*   color: #666;       / */
-  font-style: italic;
+/*   font-style: italic; */
 }
 
 /* ==========================================================================
