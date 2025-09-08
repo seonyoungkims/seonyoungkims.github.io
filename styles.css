@@ -470,7 +470,7 @@ a:hover, a:focus {
 }
 
 #honors .timeline li .timeline-header {
-  margin-bottom: 4px;          /* 헤더와 기간 사이 간격 (조절 가능) */
+  margin-bottom: 0;          /* 헤더와 기간 사이 간격 (조절 가능) */
 }
 
 #honors .timeline li .header-period {
