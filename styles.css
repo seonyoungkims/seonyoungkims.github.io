@@ -1,14 +1,16 @@
 /* =========================
    Base
 ========================= */
-/* 본문 전체에는 Inter를 기본으로 지정합니다. */
+/* 본문 전체에 Inter를 기본으로 지정 (보통 굵기) */
 body {
   font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400; /* Regular */
 }
 
-/* 제목(h2, h3)에는 Source Serif 4를 별도로 지정합니다. */
+/* 제목(h2, h3)은 Inter 폰트를 사용하되, 더 굵게 만듦 */
 h2, h3 {
-  font-family: 'Source Serif 3', serif;
+  font-family: 'Inter', system-ui, sans-serif; /* body와 동일하게 유지 */
+  font-weight: 700; /* Bold */
 }
 
 :root {
