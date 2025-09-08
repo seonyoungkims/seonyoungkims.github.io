@@ -176,9 +176,6 @@ a:hover, a:focus {
   margin: 0;
 }
 
-/* #background .timeline li {
-  margin-bottom: 20px;        /* 항목 간 간격 */
-} */
 
 #background .timeline-header {
   font-weight: 600;           /* "지위 | 기관 | 기간" 라인 강조 */
@@ -204,7 +201,8 @@ a:hover, a:focus {
 }
 
 #background .timeline-body ul {
-  list-style-type: none; /* 불렛(•) 제거 */
+  list-style-type: disc;
+  list-style-position: outside;
   padding-left: 15px;       /* 왼쪽 기본 여백 제거 */
   margin: 0;             /* 위아래 기본 여백 제거 */
 }
