@@ -453,32 +453,44 @@ a:hover, a:focus {
   font-style: italic;
 }
 
-/* Extracurricular Activities 스타일 */
-.activities-list {
-  margin: 0;
+/* ==========================================================================
+   (D) Extracurricular Activities  —  타임라인/리스트 스타일
+   ========================================================================== */
+#extracurricular-activities .timeline {
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-.activity-item {
-  margin-bottom: 8px;
-  font-size: 0.95rem;
+#extracurricular-activities .timeline li {
+  margin-bottom: 20px;
 }
 
-.activity-title {
-  font-weight: 600;   /* 활동명 강조 */
+#extracurricular-activities .timeline-header {
+  font-weight: 600;
 }
 
-.activity-org {
-  color: #444;        /* 기관은 중간 톤 */
+#extracurricular-activities .timeline-header a,
+#extracurricular-activities .timeline-header span {
+  text-decoration: none;
+  color: inherit;
 }
 
-.activity-date {
-  color: #666;        /* 날짜는 살짝 흐리게 */
-  font-style: italic;
+#extracurricular-activities .timeline-header a:hover {
+  text-decoration: underline;
 }
 
-.activity-description {
-  margin-left: 12px;      /* 수상 내역과 설명 사이의 간격 */
+#extracurricular-activities .timeline-body {
+  margin-left: 15px;
+  line-height: 1.5;
+}
+
+#extracurricular-activities .timeline li .timeline-header {
+  margin-bottom: 4px;
+}
+
+#extracurricular-activities .timeline li .header-period {
+  margin-top: 0;
 }
 
 /* =========================
