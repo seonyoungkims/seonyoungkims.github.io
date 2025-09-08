@@ -286,7 +286,7 @@ a:hover, a:focus {
   display: block;        /* 줄바꿈 강제 */
   margin-top: 0;       /* 제목과 간격 기본 */
 /*   color: #666; */
-  font-size: 0.9em;
+/*   font-size: 0.9em; */
 }
 
 .project-image img {
