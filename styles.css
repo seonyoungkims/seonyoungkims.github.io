@@ -389,24 +389,44 @@ a:hover, a:focus {
 }
 
 
-/* Honors & Scholarships 스타일 */
-.honors-list {
-  margin: 0;
+/* ==========================================================================
+   (C) Honors & Scholarships  —  타임라인/리스트 스타일
+   ========================================================================== */
+#honors .timeline {
+  list-style: none;            /* 기본 불릿 제거 */
   padding: 0;
+  margin: 0;
 }
 
-.honor-item {
-/*   margin-bottom: 8px;   /* 항목 간격 */ */
-/*   font-size: 0.95rem; */
+#honors .timeline li {
+  margin-bottom: 20px;         /* 항목 간 간격 */
 }
 
-.honor-title {
-  font-weight: 600;     /* 상/장학금 이름 강조 */
+#honors .timeline-header {
+  font-weight: 600;            /* 라인 강조 */
 }
 
-.honor-description {
-  margin-left: 15px;      /* 들여쓰기 */
-  list-style: none; /* 이 줄을 추가하여 불렛을 제거합니다. */
+#honors .timeline-header a,
+#honors .timeline-header span { /* a 태그 외에 span 태그도 색상 적용 */
+  text-decoration: none;
+  color: inherit;
+}
+
+#honors .timeline-header a:hover {
+  text-decoration: underline;
+}
+
+#honors .timeline-body {
+  margin-left: 15px;           /* 헤더 대비 살짝 들여쓰기 */
+  line-height: 1.5;
+}
+
+#honors .timeline li .timeline-header {
+  margin-bottom: 4px;          /* 헤더와 기간 사이 간격 (조절 가능) */
+}
+
+#honors .timeline li .header-period {
+  margin-top: 0;
 }
 
 /* Teaching Assistant 스타일 */
