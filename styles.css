@@ -175,9 +175,9 @@ a:hover, a:focus {
   margin: 0;
 }
 
-#background .timeline li {
+/* #background .timeline li {
   margin-bottom: 20px;        /* 항목 간 간격 */
-}
+} */
 
 #background .timeline-header {
   font-weight: 600;           /* "지위 | 기관 | 기간" 라인 강조 */
