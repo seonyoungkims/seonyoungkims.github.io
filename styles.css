@@ -431,8 +431,6 @@ a:hover, a:focus {
   list-style-position: outside;
   padding-left: 15px; /* 들여쓰기 */
   margin-top: 0px;
-  
-  /* ✨ 2. 리스트 전체를 오른쪽으로 밀 '바깥쪽' 여백 추가 */
   margin-left: 25px;
 }
 
@@ -451,7 +449,6 @@ a:hover, a:focus {
 }
 
 #honors .timeline li {
-  list-style: none;
   margin-bottom: 20px;         /* 항목 간 간격 */
 }
 
@@ -473,6 +470,10 @@ a:hover, a:focus {
 #honors .timeline li .header-period {
   margin-top: 0;
   font-style: italic;
+}
+
+#honors .timeline li .timeline-header {
+  margin-bottom: 4px;
 }
 
 /* Teaching Assistant 스타일 */
@@ -506,7 +507,6 @@ a:hover, a:focus {
 }
 
 #extracurricular-activities .timeline-header {
-/*   font-weight: 600; */
 }
 
 #extracurricular-activities .timeline-header a,
