@@ -346,66 +346,82 @@ a:hover, a:focus {
 }
 
 
-/* ===== Publications 섹션 전용 (DROP-IN) ===== */
+/* ===== Publications: Always two-column (thumb left, text right) ===== */
 
-/* 불릿/여백 제거 */
 #publications .list {
   list-style: none;
   padding: 0;
   margin: 0;
-/*   margin-bottom: 10px; */
 }
 
-/* 전역 flex/float 무력화: 퍼블리케이션은 세로 스택 + 그리드만 사용 */
 #publications .media-item {
-  display: block !important;
-  margin-bottom: 30px;
-}
-#publications .media-thumb {
-  float: none !important;
   display: block;
+  margin-bottom: 24px; /* 항목 간격 */
 }
 
-/* 1열 Grid로 순서 고정: 제목 → 저자 → 학회 → Paper → 그림 → 설명 */
+/* 기본: 항상 2열. 이미지가 있으면 왼쪽 컬럼에 고정, 텍스트는 오른쪽에 흐름 */
 #publications .media-info {
-  display: grid !important;
+  display: grid;
+  grid-template-columns: 120px 1fr; /* 모바일에서도 항상 좌 120px, 우 가변 */
+  column-gap: 12px;
+  row-gap: 6px;
+  grid-template-areas:
+    "thumb title"
+    "thumb authors"
+    "thumb meta"
+    "thumb paper"
+    "thumb desc";
+  align-items: start;
+}
+
+/* 요소 배치 */
+#publications .media-title   { grid-area: title;   margin: 2px 0; line-height: 1.35; }
+#publications .media-authors { grid-area: authors; margin: 2px 0; line-height: 1.35; }
+#publications .media-meta    { grid-area: meta;    margin: 2px 0; line-height: 1.35; opacity: 0.9; }
+#publications .media-paper   { grid-area: paper;   margin: 2px 0; line-height: 1.35; }
+#publications .media-desc    { grid-area: desc;    margin-top: 6px; }
+
+/* 썸네일(왼쪽 고정) */
+#publications .media-thumb {
+  grid-area: thumb;
+  width: 100%;
+  max-width: 120px;     /* 좌측 컬럼 폭에 맞춤 */
+  height: auto;
+  border-radius: 6px;
+  object-fit: cover;    /* 다양한 비율 대응 */
+  align-self: start;
+  justify-self: start;
+}
+
+/* 이미지 없는 항목은 자동 1열(전체 폭 텍스트) */
+#publications .media-info:not(:has(img.media-thumb)) {
   grid-template-columns: 1fr;
   grid-template-areas:
     "title"
     "authors"
     "meta"
     "paper"
-    "thumb"
     "desc";
-  row-gap: 4px;  /* 간격 압축 (기존 12px → 4px) */
+  column-gap: 0;
 }
 
-/* ★ grid-area만 지정 — margin은 여기서 절대 넣지 말 것 */
-#publications .media-title   { grid-area: title; }
-#publications .media-authors { grid-area: authors; }
-#publications .media-meta    { grid-area: meta; }
-#publications .media-paper   { grid-area: paper; }
-#publications .media-thumb   {
-  grid-area: thumb;
-  width: 100%;
-  max-width: 650px;     /* 필요 시 조정 */
-  height: auto;
-  justify-self: center;
+/* 조금 더 넓은 화면에서는 좌측 폭만 살짝 키움 (선택 사항) */
+@media (min-width: 480px) {
+  #publications .media-info {
+    grid-template-columns: 150px 1fr;
+    column-gap: 16px;
+  }
 }
-#publications .media-desc    { grid-area: desc; }
-
-/* 간격 타이트하게 (여기가 최종 우선순위가 되도록 ★맨 아래에 둠) */
-#publications .media-title,
-#publications .media-authors,
-#publications .media-meta,
-#publications .media-paper {
-  margin: 2px 0 !important;
-  line-height: 1.35;
-}
-#publications .media-desc {
-  margin-top: 8px !important;  /* 이미지와 설명 사이만 살짝 띄움 */
+@media (min-width: 900px) {
+  #publications .media-info {
+    grid-template-columns: minmax(180px, 28%) 1fr;
+    column-gap: 24px;
+  }
 }
 
+/* 링크 디테일(선택) */
+#publications .media-title a { text-decoration: none; }
+#publications .media-title a:hover { text-decoration: underline; }
 
 
 
