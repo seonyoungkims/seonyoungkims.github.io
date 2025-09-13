@@ -1,0 +1,548 @@
+/* =========================
+   Base
+========================= */
+:root {
+  --link: #4278b3;       /* 기본 링크 색상 (선명한 파란색) */
+  --link-hover: #335f8d;  /* 마우스를 올렸을 때의 색상 (더 진한 파란색) */
+  
+  /* --- 기타 색상 및 레이아웃 변수들 --- */
+  --max-width: 860px;
+  --text-color: #333;      /* 기본 본문 색상 */
+  --heading-color: #111;   /* 제목 색상 */
+  --muted: #666;          /* 날짜 등 연한 보조 텍스트 */
+  --bg: #fff;             /* 페이지 배경색 */
+  --border: #e0e0e0;       /* 구분선 등 테두리 색상 */
+}
+
+body {
+  /* 폰트 관련 속성은 개별적으로 관리 */
+  font-family: 'Inter', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #333; /* 원하는 본문 색상 */
+
+  /* 나머지 배경, 여백 등 설정은 유지 */
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+}
+
+/* 제목 색상은 이 규칙으로 별도 관리 */
+h2, h3 {
+  font-weight: 700;
+  color: #111;
+  /* font-family는 body에서 상속받으므로 생략 가능 */
+}
+
+/* =========================
+   Layout
+========================= */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* =========================
+   Page Title (FULL-CENTER)
+========================= */
+.page-title {
+  text-align: center;           /* 가로 중앙 */
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 8px 0 24px;
+}
+
+/* ===== Page Links under name (with icons) ===== */
+.page-links {
+  display: flex;
+  justify-content: center;
+/*   flex-wrap: wrap;              한 줄 유지 */
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.page-links a {
+  display: inline-flex;           /* 아이콘+텍스트 한 줄 정렬 */
+  align-items: center;            /* 수직 정렬 */
+  padding: 6px 12px;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);  /* 화면 좁아지면 글자 축소 */
+  color: var(--link);
+/*   border: 1px solid var(--link); */
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;            /* 링크 내부 줄바꿈 방지 */
+}
+
+.page-links a:hover {
+  background: var(--link);
+  color: #fff;
+}
+
+.page-links a img {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* =========================
+   Hero (Left photo / Right text)
+========================= */
+.hero {
+  display: grid;
+  grid-template-columns: 180px 1fr;  /* 왼쪽 고정폭, 오른쪽 가변 */
+  gap: 24px;
+  align-items: center;               /* 세로 중간 정렬 */
+}
+
+/* 왼쪽: 사진 */
+.hero-left .avatar,
+.hero img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* 오른쪽: 설명 텍스트 블록 */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-right p {
+  margin-bottom: 0.1em; /* '1em'은 현재 폰트 크기만큼의 높이를 의미합니다. */
+/*   line-height: 1.6;   /* 문단 내 줄 간격도 함께 설정하면 좋습니다. */ */
+}
+
+/* 마지막 문단에는 불필요한 아래쪽 여백을 제거하여 깔끔하게 만듭니다. */
+.hero-right p:last-child {
+  margin-bottom: 0;
+}
+
+/* =========================
+   Sections
+========================= */
+h2 {
+  margin: 40px 0 12px;
+  font-size: 1.5rem;
+}
+
+/* 섹션 뒤에 구분선 */
+h2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #e0e0e0;
+  margin: 8px 0 16px;        /* 제목과 내용 사이 여백 */
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+/* .list li { margin: 8px 0; } */
+
+# period
+.header-period {
+  margin-bottom: 7px;  /* 위쪽 정보와의 간격 */
+  color: #666;       /* 약간 연한 색상으로 */
+  font-style: italic;
+  /*   font-size: 0.9em; /* 약간 작게 */ */
+}
+
+/* =========================
+   Links
+========================= */
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover, a:focus {
+  color: var(--link-hover);
+  text-decoration: underline;
+}
+
+/* 보조 유틸 */
+.muted { color: var(--muted); }
+.hr {
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0;
+}
+
+/* Contents 설정 */
+/* a 태그를 감싸고 있는 nav 태그에 적용 */
+.shortcuts nav {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px; /* 좌우 간격은 20px로 유지 */
+/*   row-gap: 5px;     /* 상하 줄 간격은 5px로 작게 조절 (원하는 값으로 변경) */ */
+}
+
+/* ==========================================================================
+   (B) Academic & Research Background  —  타임라인/리스트 스타일
+   - 사용 컴포넌트: #background, .timeline, .timeline-header, .timeline-body
+   - 학부 → 석사 → 회사 순의 스토리라인을 스캔 가능하게 표현
+   ========================================================================== */
+#background .timeline {
+  list-style: none;           /* 기본 불릿 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+
+#background .timeline-header {
+  font-weight: 600;           /* "지위 | 기관 | 기간" 라인 강조 */
+}
+
+#background .timeline-header a {
+  text-decoration: none;
+}
+#background .timeline-header a:hover { text-decoration: underline; }
+
+#background .timeline-body {
+  margin-left: 15px;          /* 헤더 대비 살짝 들여쓰기 */
+  line-height: 1.5;
+}
+
+#background .timeline li .timeline-header {
+  margin-bottom: 0; /* 헤더의 아래쪽 여백 제거 */
+}
+
+#background .timeline li .header-period {
+  margin-top: 0;    /* 기간의 위쪽 여백 제거 */
+  font-style: italic;
+}
+
+#background .timeline-body ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 15px;       /* 왼쪽 기본 여백 제거 */
+  margin: 0;             /* 위아래 기본 여백 제거 */
+}
+
+/* =========================
+   Responsive (Mobile)
+========================= */
+@media (max-width: 720px) {
+  .container { padding: 20px; }
+
+  .page-title {
+    font-size: 1.75rem;
+    margin: 4px 0 12px;
+    text-align: center;         /* 모바일에서도 확실히 중앙 */
+  }
+
+  .page-links {
+    gap: 6px;                   /* 모바일에서 간격 축소 */
+  }
+  .page-links a {
+    padding: 5px 10px;
+    font-size: clamp(0.75rem, 3.2vw, 0.9rem);
+  }
+  .page-links a img {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr; /* 세로 스택: 사진 → 설명 */
+    gap: 16px;
+    text-align: center;         /* hero 내부 텍스트 중앙 */
+    align-items: center;
+  }
+
+  .hero-left .avatar,
+  .hero img {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;             /* 사진 중앙 */
+  }
+
+  .hero-right {
+    align-items: center;        /* 설명 블록 중앙 */
+  }
+}
+
+/* 기존 스타일들 ... */
+
+/* =========================
+   Projects Section
+========================= */
+
+/* 각 프로젝트 카드 */
+.project-item {
+  max-width: var(--max-width);
+  margin: 0 0 35px;
+  list-style: none;
+}
+
+/* .project-item 중 첫 번째 요소 안의 이미지만 선택 */
+.project-item:first-child .project-image img {
+  /* width 값을 조절해 이미지 크기를 줄입니다. (예: 80%) */
+  width: 80%;
+  
+  /* 이미지가 너무 커지지 않도록 최대 너비를 설정할 수도 있습니다. */
+  /* max-width: 500px; */
+
+  /* 가운데 정렬을 원할 경우 */
+  display: block;
+  margin: 0 auto;
+}
+
+.project-header {
+  display: block;        /* 기본값, 굳이 안 써도 됨 */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.project-title {
+  font-size: 1.2em;
+  margin-bottom: 0; /* 제목의 기본 아래쪽 여백을 제거합니다 */
+}
+
+.project-period {
+  font-weight: normal;
+  display: block;        /* 줄바꿈 강제 */
+  margin-top: 0;       /* 제목과 간격 기본 */
+  font-style: italic;
+/*   color: #666; */
+/*   font-size: 0.9em; */
+}
+
+.project-image img {
+  width: 100%;   /* 텍스트 폭과 동일 */
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.project-desc {
+/*   color: #444; */
+  line-height: 1.6;
+}
+
+/* ✨ 반응형: 화면이 좁으면 세로 스택으로 자동 전환 */
+@media (max-width: 640px) {
+  #projects .media-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #projects .media-thumb {
+    width: 100%;
+    max-width: 420px;             /* 모바일에서 너무 커지지 않도록 */
+  }
+}
+
+
+/* ===== Publications 섹션 전용 (DROP-IN) ===== */
+
+/* 불릿/여백 제거 */
+#publications .list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+/*   margin-bottom: 10px; */
+}
+
+/* 전역 flex/float 무력화: 퍼블리케이션은 세로 스택 + 그리드만 사용 */
+#publications .media-item {
+  display: block !important;
+  margin-bottom: 30px;
+}
+#publications .media-thumb {
+  float: none !important;
+  display: block;
+}
+
+/* 1열 Grid로 순서 고정: 제목 → 저자 → 학회 → Paper → 그림 → 설명 */
+#publications .media-info {
+  display: grid !important;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "title"
+    "authors"
+    "meta"
+    "paper"
+    "thumb"
+    "desc";
+  row-gap: 4px;  /* 간격 압축 (기존 12px → 4px) */
+}
+
+/* ★ grid-area만 지정 — margin은 여기서 절대 넣지 말 것 */
+#publications .media-title   { grid-area: title; }
+#publications .media-authors { grid-area: authors; }
+#publications .media-meta    { grid-area: meta; }
+#publications .media-paper   { grid-area: paper; }
+#publications .media-thumb   {
+  grid-area: thumb;
+  width: 100%;
+  max-width: 650px;     /* 필요 시 조정 */
+  height: auto;
+  justify-self: center;
+}
+#publications .media-desc    { grid-area: desc; }
+
+/* 간격 타이트하게 (여기가 최종 우선순위가 되도록 ★맨 아래에 둠) */
+#publications .media-title,
+#publications .media-authors,
+#publications .media-meta,
+#publications .media-paper {
+  margin: 2px 0 !important;
+  line-height: 1.35;
+}
+#publications .media-desc {
+  margin-top: 8px !important;  /* 이미지와 설명 사이만 살짝 띄움 */
+}
+
+
+
+
+/* Talks & Presentations: 큰 항목 불렛 제거 */
+#talks .timeline {
+  list-style: none;   /* ul 자체 기본 불렛 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+#talks .timeline > li {
+  list-style: none;   /* 직계 li (Internal Seminar, Graduate Seminar) 불렛 제거 */
+  margin-bottom: 20px;
+}
+
+#talks .timeline-header {
+  margin: 0;
+}
+   
+/* Presented papers 아래 ul/li는 기본 불렛 유지 */
+#talks .timeline .timeline-body ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 15px; /* 들여쓰기 */
+  margin-top: 0px;
+  margin-left: 25px;
+}
+
+#talks .timeline li .header-period {
+  font-style: italic;
+}
+
+
+/* ==========================================================================
+   (C) Honors & Scholarships  —  타임라인/리스트 스타일
+   ========================================================================== */
+#honors .timeline {
+  list-style: none;            /* 기본 불릿 제거 */
+  padding: 0;
+  margin: 0;
+}
+
+#honors .timeline li {
+  margin-bottom: 20px;         /* 항목 간 간격 */
+}
+
+#honors .timeline-header a,
+#honors .timeline-header span { /* a 태그 외에 span 태그도 색상 적용 */
+  text-decoration: none;
+  color: inherit;
+}
+
+#honors .timeline-header a:hover {
+  text-decoration: underline;
+}
+
+#honors .timeline-body {
+  margin-left: 0;           /* 헤더 대비 들여쓰기 */
+  line-height: 1.5;
+}
+
+#honors .timeline li .header-period {
+  margin-top: 0;
+  font-style: italic;
+}
+
+#honors .timeline li .timeline-header {
+  margin-bottom: 4px;
+}
+
+/* Teaching Assistant 스타일 */
+.teaching-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; /* li 태그의 기본 점(•) 제거 */
+}
+
+.teaching-item {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.teaching-date {
+  font-style: italic;
+  font-size: 1.0rem;
+}
+
+/* ==========================================================================
+   (D) Extracurricular Activities  —  타임라인/리스트 스타일
+   ========================================================================== */
+#extracurricular-activities .timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#extracurricular-activities .timeline li {
+  margin-bottom: 20px;
+}
+
+#extracurricular-activities .timeline-header {
+}
+
+#extracurricular-activities .timeline-header a,
+#extracurricular-activities .timeline-header span {
+  text-decoration: none;
+  color: inherit;
+}
+
+#extracurricular-activities .timeline-header a:hover {
+  text-decoration: underline;
+}
+
+#extracurricular-activities .timeline-body {
+  margin-left: 0;
+  line-height: 1.5;
+}
+
+#extracurricular-activities .timeline li .timeline-header {
+  margin-bottom: 4px;
+}
+
+#extracurricular-activities .timeline li .header-period {
+  margin-top: 0;
+  font-style: italic;
+}
+
+/* =========================
+   Optional: Dark Mode
+========================= */
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #eaeaea;
+    --muted: #a0a0a0;
+    --bg: #0f1115;
+    --link: #8ab4ff;
+    --link-hover: #a9c6ff;
+    --border: #333;
+  }
+} */
