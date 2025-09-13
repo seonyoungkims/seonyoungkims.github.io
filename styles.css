@@ -381,7 +381,7 @@ a:hover, a:focus {
 #publications .media-authors { grid-area: authors; margin: 2px 0; line-height: 1.35; }
 #publications .media-meta    { grid-area: meta;    margin: 2px 0; line-height: 1.35; opacity: 0.9; }
 #publications .media-paper   { grid-area: paper;   margin: 2px 0; line-height: 1.35; }
-#publications .media-desc    { grid-area: desc;    margin-top: 6px; }
+#publications .media-desc    { grid-area: desc;    margin-top: 2px; }
 
 /* 2) 이미지 정렬을 칼럼 폭에 맞게 채우고(가로), 세로는 가운데 정렬 */
 #publications .media-thumb {
