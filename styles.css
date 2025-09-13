@@ -314,7 +314,7 @@ a:hover, a:focus {
   height: auto;
   border-radius: 6px;
   object-fit: cover;
-  justify-self: stretch;
+  justify-self: center;
   align-self: center;
   margin-bottom: 0;
 }
