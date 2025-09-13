@@ -275,8 +275,6 @@ a:hover, a:focus {
   }
 }
 
-/* 기존 스타일들 ... */
-
 /* =========================
    Projects Section
 ========================= */
@@ -288,12 +286,11 @@ a:hover, a:focus {
 }
 
 #projects .project-item {
-  display: block;
   margin-bottom: 30px;
 }
 
-/* 기본: 항상 2열. 이미지가 있으면 왼쪽, 텍스트는 오른쪽 */
-#projects .project-info {
+/* 각 프로젝트를 grid로: 왼쪽=이미지, 오른쪽=텍스트 */
+#projects .project-item {
   display: grid;
   grid-template-columns: 120px 1fr; /* 모바일에서도 좌 120px, 우 가변 */
   column-gap: 12px;
@@ -305,23 +302,25 @@ a:hover, a:focus {
   align-items: start;
 }
 
-/* 요소 위치 정의 */
-#projects .project-title   { grid-area: title;   font-size: 1.2em; margin: 2px 0; font-weight: 600; }
-#projects .project-period  { grid-area: period;  margin: 2px 0; font-style: italic; }
-#projects .project-desc    { grid-area: desc;    margin-top: 6px; line-height: 1.6; }
-#projects .project-thumb   {
-  grid-area: thumb;
+/* 위치 매핑 */
+#projects .project-header   { grid-area: title; }
+#projects .project-title    { font-size: 1.2em; margin: 2px 0; font-weight: 600; }
+#projects .project-period   { grid-area: period; margin: 2px 0; font-style: italic; }
+#projects .project-desc     { grid-area: desc; margin-top: 6px; line-height: 1.6; }
+
+#projects .project-image    { grid-area: thumb; }
+#projects .project-image img {
   width: 100%;
   height: auto;
   border-radius: 6px;
   object-fit: cover;
   justify-self: stretch;
   align-self: center;
-  margin-bottom: 0; /* publications처럼 desc 위 간격은 project-desc에서 처리 */
+  margin-bottom: 0;
 }
 
 /* 이미지 없는 프로젝트는 전체 폭 글만 */
-#projects .project-info:not(:has(img.project-thumb)) {
+#projects .project-item:not(:has(.project-image img)) {
   grid-template-columns: 1fr;
   grid-template-areas:
     "title"
@@ -332,11 +331,12 @@ a:hover, a:focus {
 
 /* 넓은 화면에서 좌측 이미지 폭 늘리기 */
 @media (min-width: 900px) {
-  #projects .project-info:has(img.project-thumb) {
+  #projects .project-item:has(.project-image img) {
     grid-template-columns: minmax(200px, 30%) 1fr;
     column-gap: 24px;
   }
 }
+
 
 
 
