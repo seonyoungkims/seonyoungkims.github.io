@@ -275,6 +275,7 @@ a:hover, a:focus {
   }
 }
 
+
 /* =========================
    Projects Section
 ========================= */
@@ -308,14 +309,20 @@ a:hover, a:focus {
 #projects .project-period   { grid-area: period; margin: 2px 0; font-style: italic; }
 #projects .project-desc     { grid-area: desc; margin-top: 6px; line-height: 1.6; }
 
-#projects .project-image    { grid-area: thumb; }
+/* ✅ 이미지 컨테이너를 flex로 만들어 중앙 배치 */
+#projects .project-image {
+  grid-area: thumb;
+  display: flex;
+  justify-content: center; /* 가로 중앙 */
+  align-items: center;     /* 세로 중앙 */
+}
+
+/* ✅ 이미지 자체는 크기만 제어 */
 #projects .project-image img {
-  width: 100%;
+  max-width: 100%;   /* 셀을 넘지 않도록 */
   height: auto;
   border-radius: 6px;
-  object-fit: cover;
-  justify-self: center;
-  align-self: center;
+  object-fit: contain; /* 가운데 배치 + 비율 유지 */
   margin-bottom: 0;
 }
 
@@ -336,6 +343,7 @@ a:hover, a:focus {
     column-gap: 24px;
   }
 }
+
 
 
 
