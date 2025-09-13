@@ -362,8 +362,8 @@ a:hover, a:focus {
 /* 기본: 항상 2열. 이미지가 있으면 왼쪽 컬럼에 고정, 텍스트는 오른쪽에 흐름 */
 #publications .media-info {
   display: grid;
-  grid-template-columns: 120px 1fr; /* 모바일에서도 항상 좌 120px, 우 가변 */
-  column-gap: 12px;
+  grid-template-columns: clamp(140px, 28vw, 260px) 1fr; /* 기존 120px → 반응형 */
+  column-gap: 16px;
   row-gap: 6px;
   grid-template-areas:
     "thumb title"
@@ -381,16 +381,16 @@ a:hover, a:focus {
 #publications .media-paper   { grid-area: paper;   margin: 2px 0; line-height: 1.35; }
 #publications .media-desc    { grid-area: desc;    margin-top: 6px; }
 
-/* 썸네일(왼쪽 고정) */
+/* 2) 이미지 정렬을 칼럼 폭에 맞게 채우고(가로), 세로는 가운데 정렬 */
 #publications .media-thumb {
   grid-area: thumb;
+  display: block;
   width: 100%;
-  max-width: 120px;     /* 좌측 컬럼 폭에 맞춤 */
   height: auto;
+  object-fit: cover;         /* 다양한 비율 대응 */
+  justify-self: stretch;     /* 가로로 칼럼 꽉 채움 */
+  align-self: center;        /* 세로 가운데 */
   border-radius: 6px;
-  object-fit: cover;    /* 다양한 비율 대응 */
-  align-self: start;
-  justify-self: start;
 }
 
 /* 이미지 없는 항목은 자동 1열(전체 폭 텍스트) */
