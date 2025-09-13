@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seonyoung Kim</title>
+  
+  <link rel="stylesheet" href="styles.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+    <!-- 이름 -->
+    <h1 class="page-title">Seonyoung Kim</h1>
+
+    <div class="page-links">
+      <a href="mailto:seonyoungkim55@gmail.com">
+        <img src="assets/images/email.svg" alt="" aria-hidden="true"> Email
+      </a>
+      <a href="assets/pdf/SunyoungKim_CV.pdf" target="_blank">
+        <img src="assets/images/cv.svg" alt="" aria-hidden="true"> CV
+      </a>
+<!--       <a href="https://scholar.google.com/citations?user=XXXX" target="_blank">
+        <img src="assets/images/scholar.svg" alt="" aria-hidden="true"> Scholar
+      </a> -->
+<!--       <a href="https://github.com/yourusername" target="_blank">
+        <img src="assets/images/github.svg" alt="" aria-hidden="true"> GitHub
+      </a> -->
+      <a href="https://www.linkedin.com/in/seonyoung-kim-b15037363/" target="_blank">
+        <img src="assets/images/linkedin.svg" alt="" aria-hidden="true"> LinkedIn
+      </a>
+    </div>
+  
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-left">
+        <img src="assets/images/profile.jpeg" alt="Sunyoung Kim" class="avatar">
+      </div>
+      <div class="hero-right">
+        <p>
+          Hello, I am Seonyoung Kim, an AI Researcher in the SoC team at Samsung Research, where I focus on efficient inference of large-scale models and hardware-software (HW-SW) co-design. I have been interested in addressing the challenges of deploying models in resource-constrained systems. I have conducted research on the efficient deployment of LLMs, time-series models, and speech models deployment using various model compression techniques.
+        </p>
+        <p>
+          My research focus lies in <strong>efficient ML/AI, edge device inference, optimization, and hardware-aware AI design</strong>. Ultimately, I aim to develop highly efficient and widely accessible AI that can advance research and contribute to broader real-world applications.
+        </p>
+        <p>
+          Previously, I received my B.S. in Computer Engineering from Hongik University, and my M.S. in Computer Science from Korea Advanced Institute of Science and Technology (KAIST), where I was advised by Professor Myoungho Kim.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Quick Links -->
+    <section id="shortcuts" class="shortcuts">
+      <h2>Contents</h2>
+      <nav>
+        <a href="#background">Academic & Research Background</a> |
+        <a href="#publications">Publications</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#talks">Talks & Presentations</a> |
+        <a href="#honors">Honors & Scholarships</a> |
+        <a href="#teaching">Teaching Assistant</a> |
+        <a href="#activities">Extracurricular Activities</a>
+      </nav>
+    </section>
+
+
+    <!-- Background -->
+    <section id="background">
+      <h2>Academic & Research Background</h2>
+      <ul class="timeline">
+        <li>
+          <h3 class="timeline-header">
+            AI Researcher | <a href="https://research.samsung.com" target="_blank" rel="noopener noreferrer">Samsung Research</a>
+          </h3>
+          <div class="header-period">
+            Aug. 2022 – Present
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>NPU Architecture team (SoC)</li>
+              <li>Focus: Model compression, LLMs, HW–SW co-design</li>
+            </ul>
+          </div>
+        </li>
+    
+        <li>
+          <h3 class="timeline-header">
+            M.S. in Computer Science | <a href="https://www.kaist.ac.kr/en/" target="_blank" rel="noopener noreferrer">Korea Advanced Institute of Science and Technology (KAIST)</a>
+          </h3>
+          <div class="header-period">
+            Sep. 2019 – Feb. 2022
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Research Assistant (RA), <a href="http://dbserver.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">Database Lab</a></li>
+              <li>Advisor: Prof. Myoungho Kim</li>
+              <li>Focus: Knowledge Distillation, Time-series anomaly detection</li>
+            </ul>
+          </div>
+        </li>
+    
+        <li>
+          <h3 class="timeline-header">
+            B.S. in Computer Engineering | <a href="https://www.hongik.ac.kr/en/index.do" target="_blank" rel="noopener noreferrer">Hongik University</a>
+          </h3>
+          <div class="header-period">
+            Mar. 2015 – Aug. 2019
+          </div>
+          <div class="timeline-body">
+            <ul>
+              <li>Undergraduate Researcher, <a href="https://apl.hongik.ac.kr/home" target="_blank" rel="noopener noreferrer">Research Lab for Distributed INtelligence and Autonomy (DINA)</a></li>
+              <li>Advisor: Prof. Young Yoon</li>
+              <li>Focus: AI, Data analysis, Distributed system </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </section>
+    
+    <!-- Publications -->
+    <section id="publications"><h2>Publications</h2>
+      <ul class="list">
+        <li class="media-item">
+          <div class="media-info">
+            <h3 class="media-title">
+              Bespoke LUT: Non-Linear Approximation for Integer-only Transformer Inference on NPUs
+            </h3>
+        
+            <p class="media-authors">
+              <strong>Seonyoung Kim*</strong>, Jooeun Kim*, Hayoung Yoon, Mijeong Park, Heonjae Ha
+            </p>
+        
+            <p class="media-meta"><i>Under review</i>, 2025</p>
+        
+<!--             <p class="media-paper">
+              <a href="assets/papers/P2.pdf" target="_blank">Paper</a>
+            </p> -->
+        
+            <!-- ★ 그림을 Paper 뒤, 설명 앞에 둔다 -->
+            <img src="assets/images/publication3.svg" alt="Overview figure" class="media-thumb">
+        
+            <p class="media-desc">
+              <strong>Bespoke LUT</strong> introduces <strong>per-layer dual-range lookup tables</strong> with interpolation to approximate <strong>nonlinear operations</strong> efficiently on NPUs. By offloading these operations from the SFU to the MAU, it reduces latency and power consumption. Experiments on Transformer models demonstrate up to <strong>3.3× speedup with less than 6% accuracy degradation</strong>, underscoring its effectiveness for efficient NPU deployment.
+            </p>
+          </div>
+        </li>
+        
+        <li class="media-item">
+          <div class="media-info">
+            <h3 class="media-title">
+              <a href="assets/papers/P2.pdf" target="_blank">
+                Small-sized Anomaly Detection Models for Time Series based on Distillation of Long-term Dependency
+              </a>
+            </h3>
+        
+            <p class="media-authors">
+              <strong>Seonyoung Kim</strong>, Myoungho Kim
+            </p>
+        
+            <p class="media-meta"><i>Master Thesis</i>, 2022</p>
+        
+<!--             <p class="media-paper">
+              <a href="assets/papers/P2.pdf" target="_blank">Paper</a>
+            </p> -->
+        
+            <!-- ★ 그림을 Paper 뒤, 설명 앞에 둔다 -->
+            <img src="assets/images/publication2.png" alt="Overview figure" class="media-thumb">
+        
+            <p class="media-desc">
+              We developed <strong>a lightweight attention-based model for time-series anomaly detection</strong> by combining knowledge distillation with <strong>a novel Long-Term Accumulator (LTA)</strong>. Even with <strong>input lengths reduced to 50% of the original</strong>, the model preserves long-term dependencies, achieving over <strong>95% parameter reduction</strong> and <strong>nearly 50% faster inference</strong> while maintaining comparable F1 scores to larger models.
+            </p>
+          </div>
+        </li>
+
+        
+        <li class="media-item">
+          <div class="media-info">
+            <h3 class="media-title">
+              <a href="assets/papers/P1.pdf" target="_blank">
+                Knowledge distillation for anomaly detection in multivariate time series data
+              </a>
+            </h3>
+        
+            <p class="media-authors">
+              <strong>Seonyoung Kim</strong>, Myoungho Kim
+            </p>
+        
+            <p class="media-meta"><i>KCC Oral</i>, 2021</p>
+        
+<!--             <p class="media-paper">
+              <a href="assets/papers/P1.pdf" target="_blank">Paper</a>
+            </p> -->
+        
+            <img src="assets/images/publication1.png" alt="Overview figure" class="media-thumb">
+        
+            <p class="media-desc">
+              This paper proposes <strong>a knowledge distillation approach for anomaly detection in multivariate time-series data</strong> using LSTM-based autoencoders. By introducing <Strong>an MSE-based distillation loss</strong>, the method enables a compact student model to achieve performance comparable to its teacher while <strong>reducing parameters by about 60%</strong>. This demonstrates the potential of knowledge distillation for building efficient and practical anomaly detection systems.
+            </p>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+    
+    <!-- Projects -->
+    <section id="projects"><h2>Projects</h2>
+      <ul class="list">
+      <li class="project-item">
+            <!-- 프로젝트 이름 | 기간 -->
+            <div class="project-header">
+              <h3 class="project-title">Efficient AI Deployment on NPUs</h3>
+              <p class="project-period">Aug. 2022 - Present</p>
+            </div>
+  
+            <!-- 그림 -->
+            <div class="project-image">
+              <img src="assets/images/Pr5.png" alt="Edge Computing–Based Anomaly Detection in Memory Semiconductor Processes thumbnail">
+            </div>
+      
+            <!-- 설명 -->
+            <div class="project-desc">
+              <p>
+                At Samsung Research, I work on <strong>deploying large-scale AI models efficiently on custom Neural Processing Units (NPUs)</strong>. My research covers <strong>model compression and optimization techniques</strong> including quantization, pruning, and knowledge distillation, and I handle <strong>a wide range of models such as LLaMA, Gemma, OPT, SmolLM, and speech models</strong>. I also focus on <strong>hardware–software co-design</strong>, adapting model architectures for NPU compatibility and developing specialized components. This work enables advanced AI capabilities on Samsung consumer devices, as showcased in <strong>Samsung’s AI-powered TVs</strong>.
+              </p>
+              <p>
+              Related article: <a href="https://news.samsung.com/global/the-new-samsung-ai-tv-bringing-the-future-home" target="_blank">Samsung Newsroom – The New Samsung AI TV</a>
+              </p>
+            </div>
+      </li>
+        
+      <li class="project-item">
+            <!-- 프로젝트 이름 | 기간 -->
+            <div class="project-header">
+              <h3 class="project-title">Edge Computing–Based Anomaly Detection in Memory Semiconductor Processes</h3>
+              <p class="project-period">Sep. 2020 - Sep. 2021</p>
+            </div>
+  
+            <!-- 그림 -->
+            <div class="project-image">
+              <img src="assets/images/Pr4.png" alt="Edge Computing–Based Anomaly Detection in Memory Semiconductor Processes thumbnail">
+            </div>
+      
+            <!-- 설명 -->
+            <div class="project-desc">
+              <p>
+                The system employs <strong>autoencoder-based sequence reconstruction to calculate anomaly scores and visualize process states</strong>, and incorporates <strong>an LSTM-based deep learning model to predict the remaining useful life (RUL) of processes</strong>, enabling predictive maintenance and improved efficiency.
+              </p>
+            </div>
+        </li>
+        
+      <li class="project-item">
+            <!-- 프로젝트 이름 | 기간 -->
+            <div class="project-header">
+              <h3 class="project-title">Chemical Mechanical Planarization (CMP) Wafer Defect Detection Project</h3>
+              <p class="project-period">Dec. 2019 - Jun. 2020</p>
+            </div>
+  
+            <!-- 그림 -->
+            <div class="project-image">
+              <img src="assets/images/Pr3.png" alt="CMP Wafer Defect Detection Project thumbnail">
+            </div>
+      
+            <!-- 설명 -->
+            <div class="project-desc">
+              <p>
+                A deep learning model classifies wafer states (Normal, UnCMP, OverCMP, Cleaning Defect) and visualizes defect regions with class activation maps, further enhanced by generative models for virtual defect wafer images. I contributed to this project by supporting data collection and model training.
+              </p>
+            </div>
+        </li>
+
+        
+        <li class="project-item">
+            <!-- 프로젝트 이름 | 기간 -->
+            <div class="project-header">
+              <h3 class="project-title">Neouly Security Project</h3>
+              <p class="project-period">Dec. 2018 – Jun. 2019</p>
+            </div>
+  
+            <!-- 그림 -->
+            <div class="project-image">
+              <img src="assets/images/Pr2.png" alt="Neouly Security Project thumbnail">
+            </div>
+      
+            <!-- 설명 -->
+            <div class="project-desc">
+              <p>
+                Using Cuckoo Sandbox, we created a virtual environment to log behavioral patterns of malware, which were then used to train a Deep Neural Network for malware detection. Our model achieved an accuracy of 97.8%, surpassing the top team’s result (97.53%) in the KISA Data Challenge.
+              </p>
+            </div>
+        </li>
+        
+        <li class="project-item">
+          <!-- 프로젝트 이름 | 기간 -->
+          <div class="project-header">
+            <h3 class="project-title">AI-based Restaurant Recommendation System</h3>
+            <p class="project-period">Jan. 2018 – Nov. 2018</p>
+          </div>
+
+          <!-- 그림 -->
+          <div class="project-image">
+            <img src="assets/images/Pr1.png" alt="AI-based Restaurant Recommendation System thumbnail">
+          </div>
+    
+          <!-- 설명 -->
+          <div class="project-desc">
+            <p>
+              Restaurant review data were collected through web crawling, embedded with Word2Vec, manually labeled for sentiment, and classified using a Bi-LSTM model to recommend restaurants with more than 70% positive reviews. The system was implemented using Python, Django, Java, HTML, and MySQL.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Talks & Presentations -->
+    <section id="talks">
+      <h2>Talks & Presentations</h2>
+      <ul class="timeline">
+        <!-- 회사 발표 -->
+        <li>
+          <h3 class="timeline-header">
+            Internal Seminar (Journal Club) | Samsung Research
+          </h3>
+
+          <div class="header-period">
+            Feb. 2023 – Present
+          </div>
+          
+          <div class="timeline-body">
+            Participated in the company’s internal Journal Club, where researchers rotate presenting recent papers.  
+            <br>
+            Presented papers:
+            <ul>
+              <li>"Addition is almost all you need: Compressing neural networks with double binary factorization", Aug. 2025</li>
+              <li>"SmolVLM: Redefining small and efficient multimodal models", Apr. 2025</li>
+              <li>"You Only Cache Once: Decoder-Decoder Architectures for Language Models", Nov. 2024</li>
+              <li>"LoRA: Low-Rank Adaptation of Large Language Models", Jul. 2024</li>
+              <li>"Introduction to LLM: From GPT to Chinchilla and LLaMA", Mar. 2024</li>
+              <li>"PTQ4ViT: Post-Training Quantization for Vision Transformers with Twin Uniform Quantization", Dec. 2023</li>
+              <li>"cosFormer: Rethinking Softmax In Attention", Jul. 2023</li>
+              <li>"FQ-ViT: Post-Training Quantization for Fully Quantized Vision Transformer", Feb. 2023</li>
+            </ul>
+          </div>
+        </li>
+    
+        <!-- 석사 발표 -->
+        <li>
+          <h3 class="timeline-header">
+            Graduate Seminar | KAIST
+          </h3>
+          <div class="header-period">
+            Jan. 2019 – May. 2021
+          </div>
+          <div class="timeline-body">
+            Presented papers:
+            <ul>
+              <li>"Knowledge Distillation and Beyond: From FitNet and Born-Again Networks to Noisy Time-Series Models", May 2021 [<a href="assets/presentations/noisy_timeseries.pdf" target="_blank">Slides</a>]</li>
+              <li>"Knowledge Distillation in Time-series (2)", Nov. 2020 [<a href="assets/presentations/kd_timeseries2.pdf" target="_blank">Slides</a>]</li>
+              <li>"Knowledge Distillation in Time-series (1)", Oct. 2020 [<a href="assets/presentations/kd_timeseries1.pdf" target="_blank">Slides</a>]</li>
+              <li>"Model Compression and Acceleration", July 2020 [<a href="assets/presentations/model_compression.pdf" target="_blank">Slides</a>]</li>
+              <li>"A Deep Neural Network for Unsupervised Anomaly Detection and Diagnosis in Multivariate Time Series Data", Feb. 2020 [<a href="assets/presentations/MSCRED.pdf" target="_blank">Slides</a>]</li>
+              <li>"LSTM-based Encoder-Decoder for Multi-sensor Anomaly Detection", Jan. 2020 [<a href="assets/presentations/lstm_anomaly.pdf" target="_blank">Slides</a>]</li>
+              <!-- 2021.05.01 발표 자료 정리 후 업데이트 예정 -->
+            </ul>
+          </div>
+        </li>
+
+      </ul>
+    </section>
+
+    <section id="honors">
+      <h2>Honors & Scholarships</h2>
+      <ul class="timeline">
+        <li>
+          <h3 class="timeline-header">
+            Outstanding Teaching Assistant Award | <span>KAIST</span>
+          </h3>
+          <div class="header-period">
+            Jun. 2020
+          </div>
+          <div class="timeline-body">
+            Selected as an Outstanding Teaching Assistant for the 'Data Structures' course in recognition of receiving top-tier scores on end-of-semester student evaluations.
+          </div>
+        </li>
+    
+        <li>
+          <h3 class="timeline-header">
+            The Hongik Scholarship ($15,900 in total) | <span>Hongik University</span>
+          </h3>
+          <div class="header-period">
+            Aug. 2015 – Sep. 2018
+          </div>
+          <div class="timeline-body">
+            Continuously recognized for top academic achievements with a merit scholarship awarded annually. Over four years, I received a total of approximately $15,900, which included two full-tuition waivers for exceptional grades.
+          </div>
+        </li>
+    
+        <li>
+          <h3 class="timeline-header">
+            Korea Open Source Software Developers Lab (KOSS) Hackathon (2nd place) | <span>Korea IT Business Promotion Association</span>
+          </h3>
+          <div class="header-period">
+            Oct. 2016
+          </div>
+          <div class="timeline-body">
+            As a member of the Linux perf team, contributed to the open-source kernel tool by analyzing its source code and implementing a visualization feature for the srcline function to improve its usability.
+          </div>
+        </li>
+    
+      </ul>
+    </section>
+
+    <!-- Teaching Experience -->
+    <section id="teaching">
+      <h2>Teaching Assistant</h2>
+      <div class="teaching-list">
+        <h3 class="teaching-item">
+          <span class="teaching-title">Database System</span>, Graduate Course |
+          <span class="teaching-org">KAIST</span> |
+          <span class="teaching-date">Mar. 2021 – Jun. 2021</span>
+        </h3>
+        <h3 class="teaching-item">
+          <span class="teaching-title">System Programming</span>, Undergraduate Course |
+          <span class="teaching-org">KAIST</span> |
+          <span class="teaching-date">Sep. 2020 – Dec. 2020</span>
+        </h3>
+        <h3 class="teaching-item">
+          <span class="teaching-title">Data Structure</span>, Undergraduate Course |
+          <span class="teaching-org">KAIST</span> |
+          <span class="teaching-date">Sep. 2020 – Dec. 2020</span>
+        </h3>
+      </div>
+    </section>
+
+    <!-- Extracurricular Activities -->
+    <section id="extracurricular-activities">
+      <h2>Extracurricular Activities</h2>
+      <ul class="timeline">
+    
+        <li>
+          <h3 class="timeline-header">
+            Vice President, Graduate Student Association | <span>School of Computing, KAIST</span>
+          </h3>
+          <div class="header-period">
+            Mar. 2020 – Feb. 2021
+          </div>
+          <div class="timeline-body">
+            Took a leadership role in organizing departmental events and acted as a key liaison, fostering close communication and a supportive environment within the graduate student community.
+          </div>
+        </li>
+    
+        </ul>
+    </section>
+
+
+  </main>
+</body>
+</html>
