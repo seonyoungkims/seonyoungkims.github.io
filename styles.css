@@ -555,6 +555,16 @@ a:hover, a:focus {
   font-style: italic;
 }
 
+
+/* "project-detail" 클래스 *안에 있는* h3와 ul에만 적용됩니다 */
+.project-detail h3 {
+  margin-bottom: 10px; 
+}
+
+.project-detail ul {
+  margin-top: 10px;
+}
+
 /* =========================
    Optional: Dark Mode
 ========================= */
