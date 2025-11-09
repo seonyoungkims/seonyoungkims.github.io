@@ -22,23 +22,54 @@
 
     <section class="project-detail">
       <img src="../../assets/images/Pr6.png" alt="Efficient AI Deployment on NPUs thumbnail" style="width:100%; max-width:600px; margin-bottom: 20px;">
-      
-      <h2>Project Overview</h2>
-      <p>
-        At Samsung Research, I research hardware-aware model compression techniques, such as ultra low-bit quantization, to enable efficient deployment on NPUs. My work spans large-scale models including LLaMA, Gemma, and speech models.
-      </p>
-
-      <h2>My Role & Contributions</h2>
+      <h2>Project Highlights</h2>
+    
+      <h3>Bespoke LUT</h3>
       <ul>
-        <li>Researched and implemented sub-4-bit quantization (e.g., 3-bit, 2-bit) algorithms.</li>
-        <li>Analyzed hardware constraints of the NPU to develop co-designed optimization strategies.</li>
-        <li>Achieved significant reduction in model size and latency for LLaMA models on target hardware.</li>
-        </ul>
-
-      <h2>Key Challenges & Solutions</h2>
-      <p>
-        One of the main challenges was...
-      </p>
+        <li><strong>Problem Definition:</strong> Identified that Activation functions processed on DSPs (Digital Signal Processors) were the decoding bottleneck, based on profiling Samsung (in-house) and Qualcomm NPUs.</li>
+        <li><strong>Solution:</strong> Researched a technique to replace this DSP operation with a hardware-friendly Look-Up Table (LUT).</li>
+        <li><strong>Applied Models:</strong> Vision (ViT, DeiT, EfficientFormer, DETR) and LLMs (TinyLlama, SmolLM, OPT).</li>
+        <li><strong>Key Result:</strong> Achieved a 3.3x speedup in latency.</li>
+      </ul>
+    
+      <h3>RaBiT</h3>
+      <ul>
+        <li><strong>Objective:</strong> Achieve SOTA 2-bit accuracy and improve inference speed.</li>
+        <li><strong>Problem:</strong> In existing binarization methods (1-bit 2-path), the residual path failed to perform effective error compensation.</li>
+        <li><strong>Solution:</strong> Optimized the residual path's error compensation by modifying the weight initialization and gradient calculation processes.</li>
+        <li><strong>Result:</strong> Attained SOTA performance on Llama and Gemma, with a 4.49x inference speedup.</li>
+      </ul>
+    
+      <h3>ConformerT NPU Deployment</h3>
+      <ul>
+        <li>Converted the model for NPU deployment and applied 8/16 mixed-precision quantization.</li>
+        <li>Explored the optimal accuracy-performance (memory/speed) trade-off point using accuracy-based sensitivity analysis and profiling.</li>
+        <li>Successfully deployed with a Real-Time Factor (RTF) below 1.0.</li>
+      </ul>
+    
+      <h3>Next-Generation NPU R&D</h3>
+      <ul>
+        <li>Researched various model compression techniques for next-generation NPU-SW co-design.</li>
+        <li>Trained SmolLM from scratch, then applied and analyzed advanced compression techniques like VPTQ and 1.58-bit quantization.</li>
+        <li>Applied the YOCO (You Only Cache Once) technique to support long context.</li>
+      </ul>
+    
+      <h3>Framework Development Support</h3>
+      <ul>
+        <li>
+          <strong>QUEST (Role: Contributor)</strong>
+          <ul>
+            <li>Implemented, validated, and conducted unit tests for LUT and microscaling techniques in the in-house quantization tool.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>LLMs (Role: Owner)</strong>
+          <ul>
+            <li>Developed a tool supporting the full pipeline from data preprocessing to quantization for various LLMs (Llama, Gemma, OPT, etc.).</li>
+            <li>Used as the foundational framework for on-device LLM research.</li>
+          </ul>
+        </li>
+      </ul>
 
     </section>
 
