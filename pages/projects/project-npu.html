@@ -26,18 +26,18 @@
     
       <h3>Bespoke LUT</h3>
       <ul>
-        <li><strong>Problem Definition:</strong> Identified that Activation functions processed on DSPs (Digital Signal Processors) were the decoding bottleneck, based on profiling Samsung (in-house) and Qualcomm NPUs.</li>
-        <li><strong>Solution:</strong> Researched a technique to replace this DSP operation with a hardware-friendly Look-Up Table (LUT).</li>
-        <li><strong>Applied Models:</strong> Vision (ViT, DeiT, EfficientFormer, DETR) and LLMs (TinyLlama, SmolLM, OPT).</li>
-        <li><strong>Key Result:</strong> Achieved a 3.3x speedup in latency.</li>
+        <li>Problem Definition: Identified that Activation functions processed on DSPs (Digital Signal Processors) were the decoding bottleneck, based on profiling Samsung (in-house) and Qualcomm NPUs.</li>
+        <li>Solution: Researched a technique to replace this DSP operation with a hardware-friendly Look-Up Table (LUT).</li>
+        <li>Applied Models: Vision (ViT, DeiT, EfficientFormer, DETR) and LLMs (TinyLlama, SmolLM, OPT).</li>
+        <li>Key Result: Achieved a 3.3x speedup in latency.</li>
       </ul>
     
       <h3>RaBiT</h3>
       <ul>
-        <li><strong>Objective:</strong> Achieve SOTA 2-bit accuracy and improve inference speed.</li>
-        <li><strong>Problem:</strong> In existing binarization methods (1-bit 2-path), the residual path failed to perform effective error compensation.</li>
-        <li><strong>Solution:</strong> Optimized the residual path's error compensation by modifying the weight initialization and gradient calculation processes.</li>
-        <li><strong>Result:</strong> Attained SOTA performance on Llama and Gemma, with a 4.49x inference speedup.</li>
+        <li>Objective: Achieve SOTA 2-bit accuracy and improve inference speed.</li>
+        <li>Problem: In existing binarization methods (1-bit 2-path), the residual path failed to perform effective error compensation.</li>
+        <li>Solution: Optimized the residual path's error compensation by modifying the weight initialization and gradient calculation processes.</li>
+        <li>Result: Attained SOTA performance on Llama and Gemma, with a 4.49x inference speedup.</li>
       </ul>
     
       <h3>ConformerT NPU Deployment</h3>
