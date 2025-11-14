@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project: Edge Computing–Based Anomaly Detection in Memory Semiconductor Processes</title>
+  
+  <link rel="stylesheet" href="../../styles.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="container">
+
+    <h1 class="page-title">Edge Computing–Based Anomaly Detection in Memory Semiconductor Processes</h1>
+    
+    <p style="text-align: center; font-weight: 600; color: #1428A0; margin-top: -1rem; margin-bottom: 2rem;">
+      Project with Samsung Electronics
+    </p>
+
+    <div class="page-links">
+      <a href="../../index.html#projects">← Back to Main</a>
+    </div>
+
+    <section class="project-detail">
+      <img src="../../assets/images/Pr6.png" alt="Anomaly Detection System Architecture" style="width:100%; max-width:600px; margin-bottom: 30px; display: block; margin-left: auto; margin-right: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      
+      <h2>Project Overview</h2>
+      
+      <h3>Motivation</h3>
+      <ul>
+        <li>
+          Monitoring high-dimensional multivariate sensor data from semiconductor mass production using manual methods or simple thresholds had limitations in terms of accuracy and scalability. Therefore, this project aimed to develop an automated deep learning-based system for anomaly detection and Remaining Useful Life (RUL) prediction.
+        </li>
+      </ul>
+      
+      <h3>Achievements</h3>
+
+      <h3>Unsupervised Anomaly Detection</h3>
+      <ul>
+        <li>Designed a <strong>sequence reconstruction pipeline</strong> to detect anomalies based on reconstruction error.</li>
+        <li>The model was trained to learn normal patterns using unlabeled real-world process data, enabling the detection of unseen anomaly types.</li>
+        <li>Developed a visualization tool for real-time anomaly scoring, allowing engineers to pinpoint the exact onset of equipment degradation.</li>
+      </ul>
+      
+      <h3>Architecture Search (Transformer vs. LSTM)</h3>
+      <ul>
+        <li>Conducted a comparative analysis between <strong>LSTM Autoencoder</strong> and <strong>Transformer</strong> models to address the long-term dependency problem in sensor time-series data.</li>
+        <li><strong>Result:</strong> The Transformer architecture was ultimately adopted as it demonstrated superior performance in processing long sequences (<i>T</i>=60) compared to the LSTM baseline.</li>
+      </ul>
+      
+      <h3>RUL (Remaining Useful Life) Prediction</h3>
+      <ul>
+        <li>Implemented a <strong>Stacked LSTM Regression</strong> model to estimate the remaining time until equipment failure based on current process states.</li>
+        <li>Addressed the task as a supervised regression problem, distinct from the unsupervised anomaly detection module.</li>
+      </ul>
+
+    </section>
+
+  </main>
+</body>
+</html>
