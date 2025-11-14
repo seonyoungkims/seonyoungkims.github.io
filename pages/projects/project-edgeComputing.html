@@ -15,9 +15,9 @@
   <main class="container">
 
     <h1 class="page-title">Edge Computing–Based Anomaly Detection in Memory Semiconductor Processes</h1>
-    <p style="text-align: center; font-weight: 600; margin-top: -0.5rem; margin-bottom: 2rem; font-size: 1rem;">
+    <!-- <p style="text-align: center; font-weight: 600; margin-top: -0.5rem; margin-bottom: 2rem; font-size: 1rem;">
       Project with Samsung Electronics
-    </p>
+    </p> -->
 
     <div classs="page-links">
       <a href="../../index.html#projects">← Back to Main</a>
@@ -38,18 +38,19 @@
         <li style="margin-bottom: 15px;">
           Unsupervised Anomaly Detection
           <ul style="margin-top: 5px;">
-            <li>Designed a sequence reconstruction pipeline to detect anomalies based on reconstruction error.</li>
-            <li>The model was trained to learn normal patterns using unlabeled real-world process data, enabling the detection of unseen anomaly types.</li>
+            <li>Designed a sequence reconstruction pipeline to detect anomalies based on reconstruction error using unlabeled real-world process data.</li>
+            <li>Selected theTransformer architecture over LSTM baselines after a comparative analysis demonstrated its superior capability to capture long-term dependencies in sensor sequences.</li>
+            <li>Enabled the detection of unseen anomaly types by learning normal patterns from high-dimensional sensor streams.</li>
           </ul>
         </li>
 
-        <li style="margin-bottom: 15px;">
+        <!-- <li style="margin-bottom: 15px;">
           Architecture Search (Transformer vs. LSTM)
           <ul style="margin-top: 5px;">
             <li>Conducted a comparative analysis between LSTM Autoencoder and Transformer models to address the long-term dependency problem in sensor time-series data.</li>
             <li>The Transformer architecture was ultimately adopted as it demonstrated superior performance in processing long sequences compared to the LSTM baseline.</li>
           </ul>
-        </li>
+        </li> -->
         
         <li style="margin-bottom: 15px;">
           Remaining Useful Life (RUL) Prediction
