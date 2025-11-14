@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Project: Edge Computing–Based Anomaly Detection in Memory Semiconductor Processes</title>
+  <title>Project: Chemical Mechanical Planarization (CMP) Wafer Defect Detection Project</title>
   
   <link rel="stylesheet" href="../../styles.css">
   
@@ -14,7 +14,7 @@
 <body>
   <main class="container">
 
-    <h1 class="page-title">Edge Computing–Based Anomaly Detection in Memory Semiconductor Processes</h1>
+    <h1 class="page-title">Chemical Mechanical Planarization (CMP) Wafer Defect Detection Project</h1>
 
     <div classs="page-links">
       <a href="../../index.html#projects">← Back to Main</a>
@@ -25,7 +25,7 @@
       <h2>Project Overview</h2>
       <h3>Motivation</h3>
       <p>
-        Monitoring high-dimensional multivariate sensor data from semiconductor mass production using manual methods or simple thresholds had limitations in terms of accuracy and scalability. Therefore, this project aimed to develop an automated deep learning-based system for anomaly detection and Remaining Useful Life (RUL) prediction.
+        Addressed the critical need for automated quality control in semiconductor Chemical Mechanical Planarization (CMP) processes. Developed a dual-track deep learning system: a computer vision framework for identifying defective wafers and a time-series anomaly detection model for monitoring equipment sensor streams.
       </p>
       
       <h3>Achievements</h3>
@@ -33,25 +33,17 @@
       <ul style="padding-left: 20px; line-height: 1.6;">
 
         <li style="margin-bottom: 15px;">
-          Unsupervised Anomaly Detection
+          Defect Wafer Detection
           <ul style="margin-top: 5px;">
-            <li>Designed a sequence reconstruction pipeline to detect anomalies based on reconstruction error.</li>
-            <li>The model was trained to learn normal patterns using unlabeled real-world process data, enabling the detection of unseen anomaly types.</li>
+            <li>Built a CNN-based classifier to categorize wafer states (Normal, UnCMP, OverCMP, Cleaning Error).</li>
+            <li>Integrated Class Activation Mapping (CAM) to visualize and localize defective regions, providing actionable insights for engineers.</li>
           </ul>
         </li>
 
         <li style="margin-bottom: 15px;">
-          Architecture Search (Transformer vs. LSTM)
+          Sensor Anomaly Detection
           <ul style="margin-top: 5px;">
-            <li>Conducted a comparative analysis between LSTM Autoencoder and Transformer models to address the long-term dependency problem in sensor time-series data.</li>
-            <li>The Transformer architecture was ultimately adopted as it demonstrated superior performance in processing long sequences compared to the LSTM baseline.</li>
-          </ul>
-        </li>
-        
-        <li style="margin-bottom: 15px;">
-          Remaining Useful Life (RUL) Prediction
-          <ul style="margin-top: 5px;">
-            <li>Implemented a Stacked LSTM Regression model to estimate the remaining time until equipment failure based on current process states.</li>
+            <li>Designed an LSTM Encoder-Decoder architecture to reconstruct sensor data streams.</li>
           </ul>
         </li>
 
