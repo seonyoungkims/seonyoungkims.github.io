@@ -21,16 +21,20 @@
     </div>
 
     <section class="project-detail">
-      <img src="../../assets/images/Pr3.png" alt="Efficient AI Deployment on NPUs thumbnail" style="width:100%; max-width:600px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto; border-radius: 12px;">
+      <img src="../../assets/images/Pr2.png" alt="Efficient AI Deployment on NPUs thumbnail" style="width:100%; max-width:600px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto; border-radius: 12px;">
       <h2>Project Overview</h2>
-      <h3>Motivation</h3>
+      <!-- <h3>Motivation</h3> -->
       <p>
-        Addressed the critical need for automated quality control in semiconductor Chemical Mechanical Planarization (CMP) processes. Developed a dual-track deep learning system: a computer vision framework for identifying defective wafers and a time-series anomaly detection model for monitoring equipment sensor streams.
+        Developed an automated pipeline to detect malicious PE (Windows) and APK (Android) files. Addressed the security threat of evolving malware by combining dynamic behavior analysis with deep learning techniques.
       </p>
       
       <h3>Achievements</h3>
+      <li>Data Collection Pipeline: Built a crawler to collect a large dataset of benign and malicious PE/APK files and webpages for model training.</li>
+      <li>Dynamic Analysis Environment: Constructed an isolated virtual environment using Cuckoo Sandbox to safely execute suspicious files and monitor their behavior.</li>
+      <li>Behavioral Feature Engineering: Logged and analyzed system API calls and runtime patterns from the virtual environment to extract distinguishing features of malware.</li>
+      <li>Deep Learning Classification: Implemented a DNN (Deep Neural Network) model to classify files as malicious or benign based on the extracted behavioral logs.</li>
 
-      <ul style="padding-left: 20px; line-height: 1.6;">
+      <!-- <ul style="padding-left: 20px; line-height: 1.6;">
 
         <li style="margin-bottom: 15px;">
           Defect Wafer Detection
@@ -45,7 +49,7 @@
           <ul style="margin-top: 5px;">
             <li>Designed an LSTM Encoder-Decoder architecture to reconstruct sensor data streams.</li>
           </ul>
-        </li>
+        </li> -->
 
       </ul>
 
