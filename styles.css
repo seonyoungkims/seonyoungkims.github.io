@@ -568,7 +568,7 @@ a:hover, a:focus {
 
 /* MISC Section Styling */
 #misc {
-  padding: 20px 0; /* 위아래 여백 */
+  padding: 0; /* 위아래 여백 */
   text-align: left; /* ★핵심: 모든 내용을 왼쪽 정렬 */
 }
 
