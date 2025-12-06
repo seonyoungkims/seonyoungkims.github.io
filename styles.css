@@ -581,6 +581,7 @@ a:hover, a:focus {
 /* 갤러리 레이아웃: PC에서는 가로로, 모바일에서는 세로로 */
 .misc-gallery {
   display: flex;
+  width: 80%;
   justify-content: space-between; /* 양쪽 정렬 */
   gap: 20px; /* 사진 사이 간격 */
   flex-wrap: wrap; /* 화면이 좁으면 줄바꿈 */
@@ -588,15 +589,15 @@ a:hover, a:focus {
 
 .misc-item {
   flex: 1; /* 공간을 균등하게 차지 */
-  /* min-width: 300px; /* 사진이 너무 작아지지 않도록 최소 너비 설정 */
-  width: 200px;
+  min-width: 300px; /* 사진이 너무 작아지지 않도록 최소 너비 설정
+  /* width: 300px; */
   margin: 0;
   text-align: center;
 }
 
 .misc-item img {
   width: 100%;       /* 부모 영역에 꽉 차게 */
-  height: 150px;     /* 높이 고정 (원하시면 auto로 변경 가능) */
+  height: 250px;     /* 높이 고정 (원하시면 auto로 변경 가능) */
   object-fit: cover; /* 비율 유지하면서 꽉 채우기 (찌그러짐 방지) */
   border-radius: 8px; /* 모서리 둥글게 */
   box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 살짝 그림자 효과 */
