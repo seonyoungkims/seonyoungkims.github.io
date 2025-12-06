@@ -566,6 +566,54 @@ a:hover, a:focus {
   margin-bottom: 25px;
 }
 
+/* MISC Section Styling */
+#misc {
+  padding: 20px 0; /* 간격 조정 */
+}
+
+.misc-content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #444; /* 기존 텍스트 색상에 맞춰 조정하세요 */
+}
+
+/* 갤러리 레이아웃: PC에서는 가로로, 모바일에서는 세로로 */
+.misc-gallery {
+  display: flex;
+  justify-content: space-between; /* 양쪽 정렬 */
+  gap: 20px; /* 사진 사이 간격 */
+  flex-wrap: wrap; /* 화면이 좁으면 줄바꿈 */
+}
+
+.misc-item {
+  flex: 1; /* 공간을 균등하게 차지 */
+  min-width: 300px; /* 사진이 너무 작아지지 않도록 최소 너비 설정 */
+  margin: 0;
+  text-align: center;
+}
+
+.misc-item img {
+  width: 100%;       /* 부모 영역에 꽉 차게 */
+  height: 250px;     /* 높이 고정 (원하시면 auto로 변경 가능) */
+  object-fit: cover; /* 비율 유지하면서 꽉 채우기 (찌그러짐 방지) */
+  border-radius: 8px; /* 모서리 둥글게 */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 살짝 그림자 효과 */
+  transition: transform 0.3s ease; /* 호버 효과를 위한 부드러운 전환 */
+}
+
+/* 마우스 올렸을 때 살짝 떠오르는 효과 (선택사항) */
+.misc-item img:hover {
+  transform: translateY(-5px);
+}
+
+.misc-item figcaption {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+}
+
 /* =========================
    Optional: Dark Mode
 ========================= */
