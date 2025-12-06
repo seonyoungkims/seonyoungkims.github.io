@@ -614,7 +614,7 @@ a:hover, a:focus {
   font-style: italic;
 }
 
-/* =========================
+=========================
    Optional: Dark Mode
 ========================= */
 /* @media (prefers-color-scheme: dark) {
@@ -626,4 +626,4 @@ a:hover, a:focus {
     --link-hover: #a9c6ff;
     --border: #333;
   }
-} */
+}
