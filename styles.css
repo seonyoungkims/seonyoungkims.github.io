@@ -617,7 +617,7 @@ a:hover, a:focus {
 =========================
    Optional: Dark Mode
 ========================= */
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --text-color: #eaeaea;
     --muted: #a0a0a0;
