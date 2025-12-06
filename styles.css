@@ -588,7 +588,7 @@ a:hover, a:focus {
 }
 
 .misc-item {
-  flex: 1; /* 공간을 균등하게 차지 */
+  /* flex: 1; /* 공간을 균등하게 차지 */ */
   /* min-width: 300px; /* 사진이 너무 작아지지 않도록 최소 너비 설정 */
   /* width: 300px; */
   margin: 0;
