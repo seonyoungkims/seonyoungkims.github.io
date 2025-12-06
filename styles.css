@@ -612,7 +612,7 @@ a:hover, a:focus {
 
 .misc-item figcaption {
   margin-top: 8px;
-  font-size: 0.9em; /* 캡션 글자도 조금 작게 */
+  font-size: 0.8em; /* 캡션 글자도 조금 작게 */
   color: #777;
   text-align: left; /* 캡션도 왼쪽 정렬 */
 }
