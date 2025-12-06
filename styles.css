@@ -581,7 +581,7 @@ a:hover, a:focus {
 /* 갤러리 레이아웃: PC에서는 가로로, 모바일에서는 세로로 */
 .misc-gallery {
   display: flex;
-  width: 80%;
+  width: 60%;
   justify-content: space-between; /* 양쪽 정렬 */
   gap: 20px; /* 사진 사이 간격 */
   flex-wrap: wrap; /* 화면이 좁으면 줄바꿈 */
