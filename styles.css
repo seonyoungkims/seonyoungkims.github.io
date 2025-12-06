@@ -606,10 +606,6 @@ a:hover, a:focus {
   /* transition: transform 0.3s ease; */
 }
 
-/* .misc-item img:hover {
-  transform: translateY(-3px); /* 호버 효과 살짝 */
-} */
-
 .misc-item figcaption {
   margin-top: 8px;
   font-size: 0.8em; /* 캡션 글자도 조금 작게 */
