@@ -568,54 +568,54 @@ a:hover, a:focus {
 
 /* MISC Section Styling */
 #misc {
-  padding: 0;
+  padding: 20px 0; /* 위아래 여백 */
+  text-align: left; /* ★핵심: 모든 내용을 왼쪽 정렬 */
+}
+
+/* 텍스트 스타일 */
+.misc-content {
+  /* max-width: 600px; <-- 폭 제한을 풀어서 자연스럽게 둡니다 (원하면 유지 가능) */
+  margin-bottom: 20px; /* 사진과의 간격 */
 }
 
 .misc-content p {
   font-size: 1.1em;
+  color: #555;
   line-height: 1.6;
-  margin-bottom: 30px;
-  color: #444; /* 기존 텍스트 색상에 맞춰 조정하세요 */
 }
 
-/* 갤러리 레이아웃: PC에서는 가로로, 모바일에서는 세로로 */
-.misc-gallery {
+/* 사진 컨테이너 (1장 전용) */
+.misc-photo-container {
+  width: 100%;
   display: flex;
-  width: 60%;
-  justify-content: space-between; /* 양쪽 정렬 */
-  gap: 20px; /* 사진 사이 간격 */
-  flex-wrap: wrap; /* 화면이 좁으면 줄바꿈 */
+  justify-content: flex-start; /* ★핵심: 플렉스박스 아이템을 왼쪽부터 배치 */
 }
 
+/* 개별 아이템 (사진+캡션 묶음) */
 .misc-item {
-  /* flex: 1; /* 공간을 균등하게 차지 */ */
-  /* min-width: 300px; /* 사진이 너무 작아지지 않도록 최소 너비 설정 */
-  /* width: 300px; */
   margin: 0;
-  text-align: center;
+  width: 200px; /* ★핵심: 너비를 200px로 고정하여 썸네일 크기로 만듦 */
 }
 
 .misc-item img {
-  width: 100%;       /* 부모 영역에 꽉 차게 */
-  height: 150px;     /* 높이 고정 (원하시면 auto로 변경 가능) */
-  object-fit: cover; /* 비율 유지하면서 꽉 채우기 (찌그러짐 방지) */
-  /* border-radius: 8px; /* 모서리 둥글게 */ */
-  /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* 살짝 그림자 효과 */ */
-  /* transition: transform 0.3s ease; /* 호버 효과를 위한 부드러운 전환 */ */
+  width: 100%;       /* 부모(200px)에 꽉 차게 */
+  height: auto;      /* 높이는 비율에 맞춰 자동으로 (썸네일 비율 유지) */
+  /* 만약 정사각형 썸네일을 원하면 height: 200px; object-fit: cover; 로 변경하세요 */
+  border-radius: 8px; /* 모서리 둥글게 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 그림자도 살짝 줄임 */
+  transition: transform 0.3s ease;
 }
 
-/* 마우스 올렸을 때 살짝 떠오르는 효과 (선택사항) */
-/* .misc-item img:hover {
-  transform: translateY(-5px);
-} */
+.misc-item img:hover {
+  transform: translateY(-3px); /* 호버 효과 살짝 */
+}
 
 .misc-item figcaption {
-  margin-top: 10px;
-  font-size: 0.9em;
-  color: #666;
-  font-style: italic;
+  margin-top: 8px;
+  font-size: 0.9em; /* 캡션 글자도 조금 작게 */
+  color: #777;
+  text-align: left; /* 캡션도 왼쪽 정렬 */
 }
-
 =========================
    Optional: Dark Mode
 ========================= */
