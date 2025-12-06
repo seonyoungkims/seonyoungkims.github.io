@@ -601,7 +601,7 @@ a:hover, a:focus {
   width: 100%;       /* 부모(200px)에 꽉 차게 */
   height: auto;      /* 높이는 비율에 맞춰 자동으로 (썸네일 비율 유지) */
   /* 만약 정사각형 썸네일을 원하면 height: 200px; object-fit: cover; 로 변경하세요 */
-  /* border-radius: 8px; /* 모서리 둥글게 */ */
+  border-radius: 6px; /* 모서리 둥글게 */
   /* box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 그림자도 살짝 줄임 */ */
   /* transition: transform 0.3s ease; */
 }
