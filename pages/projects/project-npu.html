@@ -42,9 +42,9 @@
     
       <h3>Speech Model (ConformerT) NPU Deployment</h3>
       <ul>
-        <li>Converted the model for NPU deployment and applied 8/16 mixed-precision quantization.</li>
-        <li>Explored the optimal accuracy-performance (memory/speed) trade-off point using accuracy-based sensitivity analysis and profiling.</li>
-        <li>Successfully deployed with a Real-Time Factor (RTF) below 1.0.</li>
+        <li>Optimized the model deployment under strict NPU hardware constraints, overcoming input tensor limitations.</li>
+        <li>Proposed a graph partitioning strategy for accuracy preservation and implemented a zero-copy pipeline for system efficiency.</li>
+        <li>Achieved a Real-Time Factor (RTF) of sub-1.0, enabling successful deployment on Samsung TVs.</li>
       </ul>
     
       <h3>Next-Generation NPU R&D for LLMs</h3>
@@ -63,7 +63,7 @@
           </ul>
         </li>
         <li>
-          <strong>LLMs (Role: Owner)</strong>
+          <strong>LLMs (formerly Project LLMs, Role: Owner)</strong>
           <ul>
             <li>Developed a tool supporting the full pipeline from data preprocessing to quantization for various LLMs (Llama, Gemma, OPT, etc.).</li>
             <li>Used as the foundational framework for on-device LLM research.</li>
